@@ -1,2 +1,2 @@
 # philipsProject
-账号：philips_cvr@163.com
+账号：philips_cvrone@163.com

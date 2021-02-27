@@ -1,19 +1,11 @@
 <template name="detail">
   <view class="container">
-    <view class="header">
-      <image mode="widthFix" src="{{url}}">
-      </image>
-    </view>
+    <image src="{{url}}" mode="widthFix"></image>
+    <view class="wrapper" style="top: {{top}};">
 
-    <view class="header" wx:if="{{urlTwo}}">
-      <image mode="widthFix" src="{{urlTwo}}">
-      </image>
+      <view class="wrapper-item" wx:for="{{urlList}}" wx:key="id">
+        <image src="{{item}}" mode="widthFix"></image>
+      </view>
     </view>
-
-    <view class="footer">
-      <image mode="widthFix" src="{{imgUrl}}">
-      </image>
-    </view>
-
   </view>
 </template>

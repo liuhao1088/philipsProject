@@ -1,18 +1,48 @@
-// pages/video/video.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    item:{
+      url:'https://img10.360buyimg.com/ddimg/jfs/t1/161197/27/8128/1014289/603861a6E9a01c853/9bf3e5581b4cde03.jpg',
+      top:'',
+      urlList:[
+        'https://img14.360buyimg.com/ddimg/jfs/t1/165194/35/8271/64652/60389bb7E22b51561/fdf33ca9a472ec69.png',
+        'https://img10.360buyimg.com/ddimg/jfs/t1/169227/20/8072/63075/60389b5fEf0e34949/7b15682bd8bdc7af.png'
+      ]
+    }
    
   },
+  // toApplets(){
+  //    wx.navigateToMiniProgram({
+  //     appId: 'wxf63dcaf8f95ea541',
+  //     path:  "pages/home/home", //跳转小程序的路径
+  //     success(res) {
+  //       // 打开成功
+  //       console.log(res)
+  //     } 
+  //   })
+
+  // },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let height = app.globalData.height;
+    let top = 'item.top';
+    console.log(height);
+    if(height<800){
+      this.setData({
+        [top]:'60%'
+      })
+    }else{
+      this.setData({
+        [top]:'49%'
+      })
+    }
   },
 
   /**
@@ -60,7 +90,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  // onShareAppMessage: function () {
+  onShareAppMessage: function () {
 
-  // }
+  }
 })

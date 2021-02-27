@@ -1,4 +1,18 @@
-<!--index.wxml-->
-<view class="container">
-  
-</view>
+<import src="/template/myTemplate.wxml"></import>
+<template is="detail" data="{{...item}}"></template>
+
+        <!-- <image src="https://img10.360buyimg.com/ddimg/jfs/t1/161197/27/8128/1014289/603861a6E9a01c853/9bf3e5581b4cde03.jpg"
+        mode="widthFix"></image>
+        <view class="wrapper" style="top: {{top}};">
+
+          <view class="wrapper-item">
+            <image src="https://img14.360buyimg.com/ddimg/jfs/t1/165194/35/8271/64652/60389bb7E22b51561/fdf33ca9a472ec69.png"
+        mode="widthFix"></image>
+          </view>
+
+          <view class="wrapper-item">
+            <image src="https://img10.360buyimg.com/ddimg/jfs/t1/169227/20/8072/63075/60389b5fEf0e34949/7b15682bd8bdc7af.png"
+        mode="widthFix"></image>
+          </view>
+        </view> -->
+

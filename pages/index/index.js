@@ -10,7 +10,7 @@ Page({
       top:'',
       urlList:[
         'https://img14.360buyimg.com/ddimg/jfs/t1/165194/35/8271/64652/60389bb7E22b51561/fdf33ca9a472ec69.png',
-        'https://img10.360buyimg.com/ddimg/jfs/t1/169227/20/8072/63075/60389b5fEf0e34949/7b15682bd8bdc7af.png'
+        'https://img14.360buyimg.com/ddimg/jfs/t1/163615/19/8623/298319/603c5f85E87c980f2/a28ddc5a4ff91397.png'
       ]
     }
    

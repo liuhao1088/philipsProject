@@ -14,6 +14,10 @@ image {
   width: 100%;
 }
 
+.wrapper-item:last-child{
+  margin-top: 20rpx;
+}
+
 .header {
   width: 100%;
 }

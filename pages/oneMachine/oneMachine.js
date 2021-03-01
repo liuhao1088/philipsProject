@@ -6,38 +6,20 @@ Page({
    */
   data: {
     item:{
-      url:'https://img10.360buyimg.com/ddimg/jfs/t1/161197/27/8128/1014289/603861a6E9a01c853/9bf3e5581b4cde03.jpg',
+      url:'https://img11.360buyimg.com/ddimg/jfs/t1/162412/6/8513/369237/603c52adEfa1fe908/e0b32783cc3c0ea9.jpg',
       top:'',
       urlList:[
-        'https://img14.360buyimg.com/ddimg/jfs/t1/165194/35/8271/64652/60389bb7E22b51561/fdf33ca9a472ec69.png',
-        'https://img10.360buyimg.com/ddimg/jfs/t1/169227/20/8072/63075/60389b5fEf0e34949/7b15682bd8bdc7af.png'
+        'https://img11.360buyimg.com/ddimg/jfs/t1/164583/16/8537/314304/603c52c2Ec3846783/a9ec54b58528c4cf.png'
       ]
     }
-   
   },
-  // toApplets(){
-  //    wx.navigateToMiniProgram({
-  //     appId: 'wxf63dcaf8f95ea541',
-  //     path:  "pages/home/home", //跳转小程序的路径
-  //     success(res) {
-  //       // 打开成功
-  //       console.log(res)
-  //     } 
-  //   })
 
-  // },
   toProduct(e){
-    let index = e.currentTarget.dataset.index;
-    console.log(index)
-    if(index === 0){
-      wx.navigateTo({
-        url: '../oneMachine/oneMachine',
-      })
-    }else{
-      wx.navigateTo({
-        url: '../logger/logger',
-      })
-    }
+    // let index = e.currentTarget.dataset.index;
+    // console.log(index)
+    wx.navigateTo({
+      url: '../panoramaDetails/panoramaDetails',
+    })
   },
 
   /**

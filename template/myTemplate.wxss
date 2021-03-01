@@ -13,3 +13,19 @@ image {
 .wrapper-item{
   width: 100%;
 }
+
+.header {
+  width: 100%;
+}
+
+.detail-wrapper {
+  width: 100%;
+  border: 0rpx solid red;
+  padding-top: 40rpx;
+  padding-bottom: 80rpx;
+}
+
+.detail-imgItem{
+  width: 85%;
+  margin-top: 60rpx;
+}

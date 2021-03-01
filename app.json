@@ -1,6 +1,12 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/oneMachine/oneMachine",
+    "pages/logger/logger",
+    "pages/panoramaDetails/panoramaDetails",
+    "pages/loggerDetails/loggerDetails"
+    
+    
   ],
   "window":{
     "navigationStyle": "custom"

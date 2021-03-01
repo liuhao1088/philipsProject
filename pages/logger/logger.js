@@ -6,10 +6,10 @@ Page({
    */
   data: {
     item:{
-      url:'https://img10.360buyimg.com/ddimg/jfs/t1/140008/28/11335/121374/603c50e1E27f40a0a/b2e7cfe80518595b.jpg',
+      url:'https://img11.360buyimg.com/ddimg/jfs/t1/159535/3/9251/363701/603c5853E891fbbae/a375890a6801f0b1.jpg',
       top:'',
       urlList:[
-        'https://img11.360buyimg.com/ddimg/jfs/t1/169260/8/8445/368327/603c50fcE52f88b02/d922397b22163c55.png'
+        'https://img11.360buyimg.com/ddimg/jfs/t1/153033/1/20319/301400/603c5a9fE8b6c5fed/d707b43ecb7772e5.png'
       ]
     }
   },

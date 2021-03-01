@@ -11,7 +11,8 @@
 </template>
 
 <template name="detailContent">
-  <view class="header">
+  <view class="container">
+    <view class="header">
     <image src="{{headerUrl}}"
       mode="widthFix"></image>
   </view>
@@ -22,4 +23,6 @@
         mode="widthFix" style="border-radius: 10rpx;"></image>
     </view>
   </view>
+  </view>
+ 
 </template>

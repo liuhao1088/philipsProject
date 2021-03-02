@@ -1,2 +1,2 @@
-# shelleyProject
-账号：fnck_lhnine@163.com
+# philipsProject
+账号：philips_cvrone@163.com

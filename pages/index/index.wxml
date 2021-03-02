@@ -1,6 +1,6 @@
 <authorize id="authorize" />
 <view class="activityPosterContainer" bindtap="togroupSpecial">
-  <image src="https://img13.360buyimg.com/ddimg/jfs/t1/167054/26/2308/280759/5ffe5384E4947e41d/c6b1f2726a984798.jpg">
+  <image src="https://img11.360buyimg.com/ddimg/jfs/t1/168673/18/8610/548294/603da76eE89cac253/4d22f04e40892008.png">
   </image>
   <view class="poster-but" style="bottom: {{bottom}};">
     <button>立即领取</button>

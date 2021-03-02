@@ -70,14 +70,14 @@
       <view class="wrap-but">
         <view class="switch-but" wx:if="{{item.type=='team'}}">
           <view class="switch {{item.team_using? 'toggle-on' : 'toggle-off'}}"
-            style="background-color:{{anonymousSwitch ?'#8799a3' : '#e1001f'}}" data-index="{{index}}" bindtap="selSwitch">
+            style="background-color:{{anonymousSwitch ?'#8799a3' : '#0083C6'}}" data-index="{{index}}" bindtap="selSwitch">
             <view class="switch-enable" wx:if="{{item.team_using}}">启用</view>
             <view class="switch-disable" wx:else>禁用</view>
           </view>
         </view>
         <view class="switch-but" wx:if="{{item.type=='reservation'}}">
           <view class="switch {{item.re_using? 'toggle-on' : 'toggle-off'}}"
-            style="background-color:{{anonymousSwitch ?'#8799a3' : '#e1001f'}}" data-index="{{index}}" bindtap="selSwitch">
+            style="background-color:{{anonymousSwitch ?'#8799a3' : '#0083C6'}}" data-index="{{index}}" bindtap="selSwitch">
             <view class="switch-enable" wx:if="{{item.re_using}}">启用</view>
             <view class="switch-disable" wx:else>禁用</view>
           </view>

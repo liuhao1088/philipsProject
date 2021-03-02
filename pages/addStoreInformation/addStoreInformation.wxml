@@ -171,27 +171,33 @@
 
 <!-- 流程 -->
 <view class="cu-modal {{noticeName=='notice'?'':'show'}}" catchtouchmove="ture">
-  <view class="cu-dialog" style="background-color: #fff;">
-    <view class="cu-bar bg-white justify-end">
-      <view class="content">品牌认证门店流程</view>
-      <view class="action" bindtap="noticeModal">
-        <text class="cuIcon-close" style="color:#f92643;"></text>
+  <view class="cu-dialog notice-dialog">
+      <view class="notice-wrap">
+        <view class="notice column justify-center align-center">
+          <scroll-view class="scroll-item" scroll-y>
+            <view class="rule-title">品牌认证门店流程</view>
+            <view class="main-ruleItem">
+<text class="noticeTitle-item">一、上传门店认证资料，包括：</text>
+1.门店名称（全称）
+2.门店地址（精确到门牌号）
+3.联系人姓名
+4.联系电话
+5.营业时间
+6.店铺正面照（清晰图片）
+
+<text class="noticeTitle-item"> 二、等待认证审核通过期间 <text style="color: red;">勿重复提交</text> 同一门店申请，审核时间预计 <text style="color: red;">3-5个工作日内</text>。</text>
+            </view>
+            
+          </scroll-view>
+        </view>
+
+      </view>
+      <view class="notice-butItem column justify-center align-center">
+        <view class="noticeBut">
+          <button style="width: 100%;line-height: 60rpx;font-size: 28rpx;" bindtap="noticeModal">我已阅读</button>
+        </view>
       </view>
     </view>
-    <view class="wrapper-process">
-      <view class="wrap-process">一、上传门店认证资料，包括：</view>
-      <view class="wrap-item">
-        <view class="process-item">1.门店名称（全称）</view>
-        <view class="process-item">2.门店地址（精确到门牌号）</view>
-        <view class="process-item">3.联系人姓名</view>
-        <view class="process-item">4.联系电话</view>
-        <view class="process-item">5.营业时间</view>
-        <view class="process-item">6.店铺正面照（清晰图片）</view>
-      </view>
-      <view class="wrap-process" style=" margin-top: 24rpx;padding-bottom: 50rpx;">
-        二、<text style="color: red;">等待认证审核通过，期间勿重复提交同一门店申请，审核时间预计3-5个工作日内。</text> </view>
-    </view>
-  </view>
 </view>
 
 

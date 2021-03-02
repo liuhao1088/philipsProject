@@ -1,4 +1,4 @@
-// pages/addStoreInformation/addStoreInformation.js
+var app = getApp();
 var hourArr;
 var util = require('../../utils/util.js');
 let timer;
@@ -8,7 +8,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    codeUrl: ['https://dingyue.ws.126.net/2021/0109/39e9d227p00qmnnfv000ac0002x002xm.png'], //二维码
     multiArray: [],
     multiIndex: [0, 23],
     shop_name: '',
@@ -23,27 +22,10 @@ Page({
     whetherEmpower: 'yes',
     fo: false,
     address_label: '',
-    transmit: ''
-  },
-  //保存图片，扫码
-  previewImg: function (e) {
-    wx.previewImage({
-        urls: this.data.codeUrl,
-        current: e.currentTarget.dataset.url
-    })
-  },
-  callmobile: function () {
-    wx.makePhoneCall({
-      phoneNumber: '18665877758',
-    })
-  },
-  callphone: function () {
-    wx.makePhoneCall({
-      phoneNumber: '4009988078',
-    })
+    transmit: '',
+    bottom:''
   },
   ChooseImage() {
-    var that = this;
     wx.chooseImage({
       count: 1, //默认9
       sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
@@ -96,10 +78,32 @@ Page({
     })
   },
 
+  noticeModal(e){
+    this.setData({
+      noticeName: 'notice'
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let model = app.globalData.systemInfo.model;
+    let isIphoneX = model.search('iPhone X') != -1 ? true : false;
+    let isIphone11 = model.search('iPhone 11') != -1 ? true : false;
+    let isIphone12 = model.search('iPhone 12') != -1 ? true : false;
+    console.log(model);
+    if(isIphoneX === true || isIphone11 === true || isIphone12 === true){
+      this.setData({
+        bottom:'66rpx'
+      })
+    }else{
+      this.setData({
+        bottom:'40rpx'
+      })
+    }
+
+
     hourArr = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'];
     let array = [];
     for (let i = 0; i < 2; i++) {

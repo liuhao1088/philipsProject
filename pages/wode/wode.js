@@ -45,9 +45,9 @@ Page({
     prize: false,
     posterImg: [
       'https://img10.360buyimg.com/ddimg/jfs/t1/152563/16/14632/154080/5ffe5234Ef203ada0/78ad42bb28dba617.jpg',
-      'https://img14.360buyimg.com/ddimg/jfs/t1/166688/37/1598/104678/5ff7cf5bEb402e7cf/f01242efb00089f2.png',
+      'https://img10.360buyimg.com/ddimg/jfs/t1/161374/5/8931/141342/603de384E892f4df6/d205737d5f80f35a.jpg',
       'https://img10.360buyimg.com/ddimg/jfs/t1/152563/16/14632/154080/5ffe5234Ef203ada0/78ad42bb28dba617.jpg',
-      'https://img14.360buyimg.com/ddimg/jfs/t1/166688/37/1598/104678/5ff7cf5bEb402e7cf/f01242efb00089f2.png',
+      'https://img10.360buyimg.com/ddimg/jfs/t1/161374/5/8931/141342/603de384E892f4df6/d205737d5f80f35a.jpg',
     ],
     cardCur: 0,
   },
@@ -129,8 +129,8 @@ Page({
         url: '/pages/groupSpecial/groupSpecial',
       })
     }else{
-      wx.navigateTo({
-        url: '/pages/rOne/rOne',
+      wx.switchTab({
+        url: '../brandDetails/brandDetails',
       })
     }
   },

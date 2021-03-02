@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    shelleyUrl: 'https://img11.360buyimg.com/ddimg/jfs/t1/158874/9/2534/303570/5ff948c8E7cfd438d/0ea0437e538abc3b.jpg',
+    shelleyUrl: 'https://img13.360buyimg.com/ddimg/jfs/t1/152782/17/19635/19209/60376e51Eae6f3b4c/5c63a11223894d5d.jpg',
     userUrl: 'https://img14.360buyimg.com/ddimg/jfs/t1/159966/22/2435/167692/5ff94b2dE74de1dd6/ed58a587a59eed21.png',
     flag: true,
     hidden:false

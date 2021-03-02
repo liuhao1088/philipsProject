@@ -1,0 +1,135 @@
+<view class="groupActivitiesContainer">
+  <view class="title">活动创建</view>
+  <!--活动标题  -->
+  <view class="wrap">
+    <view class="wrap-titleItem">
+      <view class="wrap-title">活动标题</view>
+      <view class="wrap-input">
+        <input type="text" placeholder-class="placeholder" bindinput="inputTitle" value="{{title}}"
+          placeholder="请输入活动标题" /></view>
+    </view>
+
+    <view class="wrap-date">
+      <view class="wrap-dateItem">
+        <view class="wrap-title">
+          开始时间
+        </view>
+        <view class="wrap-input">
+          <rui-picker slot="flexchild" start="{{startTime}}" end="2999-12-31 00:00" value="{{startTime}}"
+            fields="minute" bindchangedatepicker="changeStartTime"></rui-picker>
+        </view>
+      </view>
+
+      <view class="wrap-dateItem">
+        <view class="wrap-title">
+          截止时间
+        </view>
+        <view class="wrap-input">
+          <rui-picker slot="flexchild" start="{{endTime}}" end="2999-12-31 00:00" value="{{endTime}}" fields="minute"
+            bindchangedatepicker="changeEndTime"></rui-picker>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 活动商品 -->
+  <view class="wrap" wx:for="{{productList}}" wx:key="id">
+    <view class="wrap-titleItem border">
+      <view class="wrap-title">活动商品</view>
+      <view class="wrap-input" data-idx='{{index}}' value='{{productList[index].name}}' bindtap="showModal"
+        data-target="chooseModal">
+        {{productList[index].name}}
+      </view>
+    </view>
+    <view class="wrap-titleItem border">
+      <view class="wrap-title">拼团价</view>
+      <view class="wrap-input">
+        <view class="input-item">
+          <view class="text-item">￥</view>
+          <view class="input" style="flex: 1;">
+            <input style="padding-left: 20rpx;" type="number" placeholder-class="placeholder" placeholder="价格"
+              data-idx='{{index}}' value='{{productList[index].price}}' id="price" bindinput='bindChanguser' />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="wrap-titleItem border">
+      <view class="wrap-title">拼团人数</view>
+      <view class="wrap-input">
+        <view class="input-item">
+          <view class="text-item">满</view>
+          <view class="input" style="width: 100rpx;">
+            <input style="padding-left: 20rpx;" type="number" placeholder-class="placeholder" placeholder="多少" bindblur="blur"
+              data-idx='{{index}}' value='{{productList[index].people}}' id="people" bindinput='bindChanguser' />
+          </view>
+          <view class="text-item">人成团</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="wrap-titleItem">
+      <view class="wrap-title">时间限制</view>
+      <view class="wrap-input">
+        <view class="input-item" style="width:100%;">
+          <view class="input" style="width: 70rpx;">
+            <input type="number" placeholder-class="placeholder" placeholder="时间" maxlength="4" data-idx='{{index}}'
+              value='{{productList[index].time}}' id="time" bindinput='bindChanguser' />
+          </view>
+          <view class="text-item">分钟后未成团则该拼团失效</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="wrap-iconItem">
+      <view class="add-item" style="color: rgba(225, 0, 31);display:{{productList.length === 1?'none':'block'}};"
+        data-idx='{{index}}' bindtap="delList">
+        <text class="iconfont iconhuishouzhan" style="font-size: 24rpx;"></text>删除商品
+      </view>
+      <view class="add-item" style="color: rgba(225, 0, 31, 0.6);display:{{productList[index].showView?'none':'block'}}"
+        data-idx='{{index}}' bindtap="onAdd">
+        <text class="iconfont iconplus1" style="font-size: 24rpx;"></text>添加商品
+      </view>
+    </view>
+  </view>
+
+  <!-- 活动预览 -->
+  <view class="title">活动预览</view>
+  <view class="wrap">
+    <view class="preview-item">
+      <image mode="widthFix" src="https://img14.360buyimg.com/ddimg/jfs/t1/170936/16/1770/244406/5ff908deEdcbf84fa/8ea171c72c03297a.png"></image>
+    </view>
+  </view>
+</view>
+<view class="but-item" bindtap="submit_form" style="padding-bottom: {{flag?'66rpx': '30rpx'}};">
+  <button bindtap="submit_form">{{transmit==''?'发布专属活动':'保存活动'}}</button>
+</view>
+
+
+<!-- 选择商品 -->
+<view class="cu-modal bottom-modal {{modalName=='chooseModal'?'show':''}}" bindtap="hideModal" catchtouchmove="ture">
+  <view class="cu-dialog" catchtap style="height: 580rpx;">
+    <view class="cu-bar bg-white" style="justify-content: flex-end;height: 80rpx;">
+      <view class="action text-green" bindtap="hideModal" style="margin-right: 30rpx;color: red;">确定</view>
+    </view>
+    <view class="grid padding-sm" style="height: 200rpx;padding: 0 30rpx;align-items:flex-end;">
+      <view class="cu-img">
+        <image class="cu-img" src="{{checkbox[ind].link}}"></image>
+      </view>
+      <view class="cu-description column">
+        <view style="position:relative;bottom:20rpx;">原价：<text
+            style="color:red;font-size:30rpx;">{{checkbox[ind].original_price==''?'暂无报价':'￥'}}{{checkbox[ind].original_price}}</text></view>
+        <view  style="white-space:pre;">产品介绍：
+{{checkbox[ind].introduce}}</view>
+      </view>
+    </view>
+    <view class="grid col-3 padding-sm">
+      <view wx:for="{{checkbox}}" class="padding-xs" wx:key="id">
+        <button class="cu-btn orange lg block {{item.checked?'line-red':''}}" bindtap="chooseCheckbox"
+          data-index="{{index}}" data-name="{{item.name}}" style="padding: 0;"> {{item.name}}
+        </button>
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,58 @@
+function getDates( todate) {
+  var day = getDate(todate).getDay();
+  switch (day) {
+    case 0:
+      return "星期天"
+      break;
+    case 1:
+      return "星期一"
+      break;
+    case 2:
+      return "星期二"
+      break;
+    case 3:
+      return "星期三"
+      break;
+    case 4:
+      return "星期四"
+      break;
+    case 5:
+      return "星期五"
+      break;
+    case 6:
+      return "星期六"
+      break;
+  }
+}
+function sub(data){
+  var result=data.substring(0,2)
+  return result
+}
+
+function substr(data){
+  if(data.length>=6){
+    var result=data.substring(0,4)+'...'
+    return result
+  }else{
+    return data;
+  }
+}
+
+function cn(data){
+  var mon=data.substring(5,7)
+  var day=data.substring(8,10)
+  return mon+"月"+day+"日"
+}
+
+function hor(data){
+  var res=data.substring(11)
+  return res
+}
+
+module.exports = {
+  getDates: getDates,
+  sub:sub,
+  substr:substr,
+  cn:cn,
+  hor:hor
+}

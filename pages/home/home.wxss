@@ -1,0 +1,5 @@
+@import "/template/myTemplate.wxss";
+page{
+  /* background-color: #03194a; */
+}
+

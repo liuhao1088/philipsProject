@@ -1,0 +1,105 @@
+<view class="carAppointmentContainer">
+  <view class="search">
+    <input type="text" value="{{searchContent}}" placeholder="请输入预约单号查询" placeholder-class="placeholder"
+      bindinput="inputSearch" value="{{search}}" />
+    <text class="iconfont iconziyuan searchIcon" bindtap="toSearch"></text>
+  </view>
+
+  <view class="wrapper" wx:for="{{list}}" wx:key="id" wx:if="{{!search_whether}}">
+    <view class="wrap">
+      <view class="wrap-title">预约体验：{{item.label}}</view>
+      <view class="wrap-tag" wx:if="{{item.status=='waiting'}}">待接受</view>
+      <view class="wrap-tag" style="opacity: 0.5;" wx:if="{{item.status=='success'}}">已接受</view>
+
+    </view>
+    <view class="wrap">
+      <view class="wrap-title">预约人员：{{item.user}}</view>
+    </view>
+    <view class="wrap">
+      <view class="wrap-title">预约时间：{{item.time}}</view>
+    </view>
+    <view class="wrap">
+      <view class="wrap-title" style="opacity: 0.5;">预约单号：{{item.re_code}}</view>
+    </view>
+
+    <view class="wrap" style="display: inline;" wx:if="{{item.status=='waiting'}}">
+      <view class="wrap-but">
+        <view class="but" data-index="{{index}}" bindtap="confirm">
+          <button class="cu-btn round sm bg-blue accept">接受预约</button>
+        </view>
+        <view class="but" style="margin-right: 30rpx;" data-index="{{index}}" bindtap="cancel" data-target="cancel">
+          <button class="cu-btn round sm bg-white cancel">取消预约</button>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="wrapper" wx:for="{{searchlist}}" wx:if="{{search_whether}}">
+    <view class="wrap">
+      <view class="wrap-title">预约体验：{{item.label}}</view>
+      <view class="wrap-tag" wx:if="{{item.status=='waiting'}}">待接受</view>
+      <view class="wrap-tag" style="opacity: 0.5;" wx:if="{{item.status=='success'}}">已接受</view>
+
+    </view>
+    <view class="wrap">
+      <view class="wrap-title">预约人员：{{item.user}}</view>
+    </view>
+    <view class="wrap">
+      <view class="wrap-title">预约时间：{{item.time}}</view>
+    </view>
+    <view class="wrap">
+      <view class="wrap-title" style="opacity: 0.5;">预约单号：{{item.re_code}}</view>
+    </view>
+
+    <view class="wrap" style="display: inline;" wx:if="{{item.status=='waiting'}}">
+      <view class="wrap-but">
+        <view class="but" data-index="{{index}}" bindtap="confirm">
+          <button class="cu-btn round sm accept">接受预约</button>
+        </view>
+        <view class="but" style="margin-right: 30rpx;" data-index="{{index}}" bindtap="cancel" data-target="cancel">
+          <button class="cu-btn round sm bg-white cancel">取消预约</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 取消预约弹窗 -->
+<view class="cu-modal {{modalName=='cancel'?'show':''}}" catchtouchmove="ture">
+  <view class="cu-dialog">
+    <view class="modal-titleItem column justify-center align-center">
+      <view class="modal-titleWrap">
+        <view>请选择取消原因</view>
+        <view class="modal-iconWrap">
+          <text class="iconfont iconwenti" style="margin-left: 10rpx;" bindtap="toExplainRules"></text>
+        </view>
+      </view>
+    </view>
+
+    <view class="modal-main">
+      <view class="modal-menuWrap">
+        <view class="menu-item {{item.flag?'menuWrap-class' : ''}}" wx:for="{{reasonList}}" wx:key="id"
+          data-index="{{index}}" bindtap="select">{{item.name}}</view>
+      </view>
+      <view class="modal-menuWrap" style="margin-top: 26rpx;" bindtap="click_flag">
+        <view class="menu-tag" style="{{flag?'background:#f92643;color:white;':''}}">其他</view>
+        <view class="menu-input" style="{{flag?'border:1px solid red':'color:gray;'}}">
+          <input type="text" bindinput="inputReason" value="{{reason}}" placeholder="请输入其他原因" />
+        </view>
+      </view>
+
+    </view>
+
+    <view class="modal-butItem">
+      <view class="modal-but">
+        <button style="width: 100%;" bindtap="hideModal">取消</button>
+      </view>
+      <view class="modal-but" style="border-left: 2rpx solid #ECECED;">
+        <button style="width: 100%;color: rgb(225, 0, 31);" bindtap="isCancel">确认</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,226 @@
+<authorize id="authorize" />
+<view class="wodeContainer" style="padding-bottom: {{bottom}};">
+  <!-- 头部 -->
+  <view class="header" bindtap="toSign">
+    <view class="header-wrap">
+      <view class="img-item justify-center">
+        <view class="img">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+      </view>
+      <view class="name-item">尊敬的 <text>{{userInfo.nickName}}</text></view>
+    </view>
+  </view>
+  <!-- 菜单 -->
+  <view class="main-wrap">
+    <!-- 车主 -->
+    <view class="main-item column justify-center align-center" bindtap="toMyCoupon"
+      wx:if="{{userInfo.type === 'driver'}}">
+      <view class="quan-item"></view>
+      <view class="main-wrapItem">
+        <view class="main-imgItem">
+          <image
+            src="https://img11.360buyimg.com/ddimg/jfs/t1/165278/10/1561/7495/5ff7c633E5be64ed7/7f9de69c4d09e3c3.png">
+          </image>
+        </view>
+        <view class="main-titleItem">
+          <view class="title">我的卡券</view>
+          <view class="title-tag">My card</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="main-item column justify-center align-center" bindtap="toAddStoreInformation"
+      wx:if="{{userInfo.type === 'driver'}}">
+      <view class="quan-item"></view>
+      <view class="main-wrapItem">
+        <view class="main-imgItem">
+          <image
+            src="https://img12.360buyimg.com/ddimg/jfs/t1/166840/12/1523/6422/5ff7c97fE786ea65a/13ccdadd56f3a4fb.png">
+          </image>
+        </view>
+        <view class="main-titleItem">
+          <view class="title">认证门店</view>
+          <view class="title-tag">CETS</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 门店 -->
+    <view class="main-item column justify-center align-center" bindtap="toCarAppointment"
+      wx:if="{{userInfo.type === 'shopkeeper'}}">
+      <view class="quan-item"></view>
+      <view class="main-wrapItem">
+        <view class="main-imgItem">
+          <image
+            src="https://img13.360buyimg.com/ddimg/jfs/t1/167374/26/1551/6426/5ff7cbfeEd9a34b08/acc824dab32df99f.png">
+          </image>
+        </view>
+        <view class="main-titleItem">
+          <view class="title">车主预约</view>
+          <view class="title-tag">C.Appointments</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="main-item column justify-center align-center" bindtap="toMyStore"
+      wx:if="{{userInfo.type === 'shopkeeper'}}">
+      <view class="quan-item"></view>
+      <view class="main-wrapItem">
+        <view class="main-imgItem">
+          <image
+            src="https://img11.360buyimg.com/ddimg/jfs/t1/161661/8/1677/6449/5ff7cc11E7be59ba8/91f05d06a36dd98f.png">
+          </image>
+        </view>
+        <view class="main-titleItem">
+          <view class="title">我的门店</view>
+          <view class="title-tag">My store</view>
+        </view>
+      </view>
+    </view>
+    <!-- 品牌 -->
+    <view class="main-item column justify-center align-center" bindtap="toAllstore"
+      wx:if="{{userInfo.type === 'brand'}}">
+      <view class="quan-item"></view>
+      <view class="main-wrapItem">
+        <view class="main-imgItem">
+          <image
+            src="https://img11.360buyimg.com/ddimg/jfs/t1/161661/8/1677/6449/5ff7cc11E7be59ba8/91f05d06a36dd98f.png">
+          </image>
+        </view>
+        <view class="main-titleItem">
+          <view class="title">全部门店</view>
+          <view class="title-tag">All store</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="main-item column justify-center align-center" bindtap="toActivityDetails"
+      wx:if="{{userInfo.type === 'brand'}}">
+      <view class="quan-item"></view>
+      <view class="main-wrapItem">
+        <view class="main-imgItem">
+          <image
+            src="https://img13.360buyimg.com/ddimg/jfs/t1/167374/26/1551/6426/5ff7cbfeEd9a34b08/acc824dab32df99f.png">
+          </image>
+        </view>
+        <view class="main-titleItem">
+          <view class="title">品牌活动</view>
+          <view class="title-tag">B.Promotions</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="poster-item">
+    <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" circular autoplay interval="3000"
+      duration="500" bindchange="cardSwiper" indicator-color="rgba(255, 255, 255, 0.1)" indicator-active-color="rgba(0, 0, 0, 0.1)" bindtap="getSwiper" id="{{cardCur}}">
+      <swiper-item wx:for="{{posterImg}}" wx:key="id" class="{{cardCur==index?'cur':''}}">
+        <view class="swiper-item">
+          <image src="{{item}}" mode="aspectFill"></image>
+
+        </view>
+      </swiper-item>
+    </swiper>
+
+  </view>
+
+  <view class="menu-wrap">
+    <!-- 消息中心 -->
+    <view class="menu-item" bindtap="toMessageCenter">
+      <view class="menu-leftItem">
+        <view class="icon-item">
+          <text class="iconfont iconGroup-"></text>
+        </view>
+        <view class="menu-tagItem">我的消息</view>
+      </view>
+      <view class="menu-rightItem">
+        <view class="small-item" wx:if="{{newMsg>0}}">{{newMsg>99?'99+':newMsg}}</view>
+        <text class="iconfont iconweibiaoti34"></text>
+      </view>
+    </view>
+    <!-- 更多好礼 -->
+    <view class="menu-item" bindtap="showModal" data-target="question" wx:if="{{prize}}">
+      <view class="menu-leftItem">
+        <view class="icon-item">
+          <text class="iconfont iconkaquan"></text>
+        </view>
+        <view class="menu-tagItem">更多好礼</view>
+      </view>
+      <view class="menu-rightItem">
+        <view class="small-item">New</view>
+        <text class="iconfont iconweibiaoti34"></text>
+      </view>
+    </view>
+    <!-- 分享好友 -->
+    <button hover-class="none" class="menu-item" open-type="share">
+      <view class="menu-leftItem">
+        <view class="icon-item">
+          <text class="iconfont iconfenxiang1"></text>
+        </view>
+        <view class="menu-tagItem">分享好友</view>
+      </view>
+      <view class="menu-rightItem">
+        <text class="iconfont iconweibiaoti34"></text>
+      </view>
+    </button>
+    <!-- 常见问题 -->
+    <view class="menu-item" bindtap="toCommonProblem">
+      <view class="menu-leftItem">
+        <view class="icon-item">
+          <text class="iconfont iconwenti1"></text>
+        </view>
+        <view class="menu-tagItem">常见问题</view>
+      </view>
+      <view class="menu-rightItem">
+        <text class="iconfont iconweibiaoti34"></text>
+      </view>
+    </view>
+
+    <!-- 帮助与反馈 -->
+    <view class="menu-item" bindtap="toHelpAndFeedback">
+      <view class="menu-leftItem">
+        <view class="icon-item">
+          <text class="iconfont icondianhua01"></text>
+        </view>
+        <view class="menu-tagItem">帮助与反馈</view>
+      </view>
+      <view class="menu-rightItem">
+        <text class="iconfont iconweibiaoti34"></text>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<!-- 问答 -->
+<view class="cu-modal {{modalName=='question'?'show':''}}" catchtouchmove="ture">
+  <view class="cu-dialog">
+    <view class="bg-img">
+      <image mode="widthFix"
+        src="https://img13.360buyimg.com/ddimg/jfs/t1/141246/32/15107/350253/60010b16E4684b541/e038b037e2507a9d.png">
+      </image>
+      <view class="modal-wrap column justify-center align-center">
+        <view class="question-item">
+            <view class="title-item">请问您是否有完成过以下升级改造或服务？</view>
+            <view class="car-lightsItem">
+              <view class="car-lightsBut" style="margin-bottom: 20rpx;" wx:for="{{checkbox}}" wx:key="id">
+                <button class="{{item.checked?'carLightsRed':'red'}}" bindtap="ChooseCheckbox"
+                  id="{{item.id}}">{{item.name}}</button>
+              </view>
+            </view>
+        </view>
+      
+        <view class="but-item">
+          <button bindtap="getCoupon">立即领取</button>
+        </view>
+        <view class="close-item" bindtap="hideModal">已阅，暂不领取</view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<!-- 导航栏 -->
+<tabbar id="getJudgment" tabbar="{{tabbar}}"></tabbar>

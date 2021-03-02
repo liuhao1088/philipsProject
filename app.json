@@ -1,16 +1,90 @@
 {
   "pages":[
+    "pages/home/home",
+    "pages/wode/wode",
+    "pages/commonProblem/commonProblem",
     "pages/index/index",
+    "pages/brandReservationActivity/brandReservationActivity",
+    "pages/brandGroupActivity/brandGroupActivity",
+    "pages/text/text",
+    "pages/storeAppointment/storeAppointment",
+    "pages/helpAndFeedback/helpAndFeedback",
+    "pages/reserveStore/reserveStore",
+    "pages/groupSpecial/groupSpecial",
+    "pages/messageCenter/messageCenter",
+    "pages/addStoreInformation/addStoreInformation",
+    "pages/activitySelect/activitySelect",
+    "pages/carAppointment/carAppointment",
+    "pages/myCoupon/myCoupon",
+    "pages/brandDetails/brandDetails",
+    "pages/groupActivities/groupActivities",
+    "pages/reservationActivity/reservationActivity",
+    "pages/myStore/myStore",
+    "pages/storeInformation/storeInformation",
+    "pages/couponRules/couponRules",
+    "pages/allStore/allStore",
+    "pages/activityRule/activityRule",
+    "pages/activityDetails/activityDetails",
+    "pages/manage/manage",
+    "pages/manage/user/user",
+    "pages/manage/examine/examine",
+    "pages/manage/activity/activity",
+    "pages/manage/user/lookup",
+    "pages/manage/examine/lookup",
     "pages/oneMachine/oneMachine",
     "pages/logger/logger",
     "pages/panoramaDetails/panoramaDetails",
     "pages/loggerDetails/loggerDetails"
-    
-    
   ],
-  "window":{
-    "navigationStyle": "custom"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#979795",
+    "selectedColor": "#f92643",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "tabbar/icon/chanpin-hui.png",
+        "selectedIconPath": "tabbar/icon/chanpin.png",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/brandDetails/brandDetails",
+        "iconPath": "tabbar/icon/pinpai-hui.png",
+        "selectedIconPath": "tabbar/icon/pinpai.png",
+        "text": "品牌"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "tabbar/icon/huodong.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/reserveStore/reserveStore",
+        "iconPath": "tabbar/icon/store-hui.png",
+        "selectedIconPath": "tabbar/icon/store.png",
+        "text": "门店"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "iconPath": "tabbar/icon/wode-hui.png",
+        "selectedIconPath": "tabbar/icon/wode.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "authorize": "components/authorize/authorize",
+    "cu-custom": "components/custom/cu-custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置定位"
+    }
+  },
   "sitemapLocation": "sitemap.json"
 }

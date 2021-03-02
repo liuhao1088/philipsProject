@@ -1,0 +1,140 @@
+<!--pages/manage/examine/examine.wxml-->
+<view class="cu-bar bg-black search" style="height:50px;">
+  <view class='search-form radius'>
+    <text style="position:relative;left:20rpx;" class="iconfont iconziyuan searchIcon"></text>
+    <input style="position:relative;left:40rpx;" type="text" placeholder="搜索关键字" confirm-type="search"
+      bindinput='inputSearch' value="{{search}}"></input>
+  </view>
+  <view class='action' bindtap='search'>
+    <text>搜索</text>
+  </view>
+</view>
+<view class="container" style="display:{{searchlist==''?'none':''}}">
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHev}}px;" class="list"
+    bindscrolltolower="" bindscrolltoupper="topLoad" bindscroll="scroll">
+    <view class='viewbox' bindlongtap='deleteAddr' wx:for="{{searchlist}}" wx:key="*" data-index="{{index}}" data-mold="search"
+      bindtap="toLookup">
+      <view class='viewbox-labal' wx:if="{{item.prove=='waiting'}}" style="background:orangered;" data-index="{{index}}">未认证</view>
+      <view class='viewbox-labal' wx:elif="{{item.prove=='success'}}" style="background:#5B62D9;" data-index="{{index}}">已认证</view>
+      <view class='viewbox-labal' wx:else style="background:gray;" data-index="{{index}}">已驳回</view>
+      <view class='row'>
+        <view class='viewbox-number'>店名：{{item.shop_name}}</view>
+        <view class='viewbox-remark'></view>
+      </view>
+      <view class='row'>
+        <view class="viewbox-address"><text decode="{{true}}">地址：{{item.address}}</text></view>
+      </view>
+    </view>
+
+    <view style="height:10px"></view>
+  </scroll-view>
+</view>
+<!--<view class='datebox align-center bg-grey'>
+  <view class='til align-center'>筛选日期</view>
+  <picker mode="date" class='pick justify-center align-center' value="{{startDate}}" bindchange="changeDate">
+      {{startDate}}
+  </picker>
+  <picker mode="date" class='pick justify-center align-center' value="{{endDate}}" bindchange="changeDate2">
+      {{endDate}}
+  </picker>
+</view>-->
+<view class="weui-tab justify-center" style='display:{{cardis}}' wx:if="{{searchlist==''}}">
+  <view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}" style='' class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}"
+        bindtap="tabClick">
+        <view class="weui-navbar__title" style="color:{{item.color}}">{{item.title}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider"
+      style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+    </view>
+  </view>
+  <view class="weui-tab__panel">
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+      <view class="container">
+        <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHev}}px;" class="list"
+          bindscrolltolower="bindDownLoad" data-mold="waiting" bindscrolltoupper="topLoad" bindscroll="scroll">
+          <view class='viewbox' bindlongtap='deleteAddr' wx:for="{{list}}" wx:key="*" data-index="{{index}}" data-mold="waiting"
+            bindtap="toLookup">
+            <view class='viewbox-labal' wx:if="{{item.prove=='waiting'}}" style="background:orangered;" data-index="{{index}}">未认证</view>
+            <view class='viewbox-labal' wx:elif="{{item.prove=='success'}}" style="background:#5B62D9;" data-index="{{index}}">已认证</view>
+            <view class='viewbox-labal' wx:else style="background:gray;" data-index="{{index}}">已驳回</view>
+            <view class='row'>
+              <view class='viewbox-number'>店名：{{item.shop_name}}</view>
+              <view class='viewbox-remark'></view>
+            </view>
+            <view class='row'>
+              <view class="viewbox-address"><text decode="{{true}}">地址：{{item.address}}</text></view>
+            </view>
+          </view>
+
+          <view style="height:10px"></view>
+        </scroll-view>
+      </view>
+
+    </view>
+
+    <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+      <view class="container">
+        <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHev}}px;" class="list"
+          bindscrolltolower="bindDownLoad" data-mold="success" bindscrolltoupper="topLoad" bindscroll="scroll">
+          <view class='viewbox' bindlongtap='' wx:for="{{alreadylist}}" wx:key="*" data-index="{{index}}" data-mold="success"
+            bindtap="toLookup">
+            <view class='viewbox-labal' style="background:#5B62D9;" data-index="{{index}}">已认证</view>
+            <view class='row'>
+              <view class='viewbox-number'>店名：{{item.shop_name}}</view>
+              <view class='viewbox-remark'></view>
+            </view>
+            <view class='row'>
+              <view class="viewbox-address"><text decode="{{true}}">地址：{{item.address}}</text></view>
+            </view>
+          </view>
+
+          <view style="height:10px"></view>
+        </scroll-view>
+      </view>
+    </view>
+
+    <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+      <view class="container">
+        <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHev}}px;" class="list"
+          bindscrolltolower="bindDownLoad" data-mold="fail" bindscrolltoupper="topLoad" bindscroll="scroll">
+          <view class='viewbox' wx:for="{{faillist}}" wx:key="*" data-index="{{index}}" bindtap="toLookup" data-mold="fail" bindlongpress="deleteFail">
+            <view class='viewbox-labal' style="background:gray;" data-index="{{index}}">已驳回</view>
+            <view class='row'>
+              <view class='viewbox-number'>店名：{{item.shop_name}}</view>
+              <view class='viewbox-remark'></view>
+            </view>
+            <view class='row'>
+              <view class="viewbox-address"><text decode="{{true}}">地址：{{item.address}}</text></view>
+            </view>
+          </view>
+
+          <view style="height:10px"></view>
+        </scroll-view>
+      </view>
+    </view>
+
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+      <view class="container">
+        <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHev}}px;" class="list"
+          bindscrolltolower="bindDownLoad" data-mold="modify" bindscrolltoupper="topLoad" bindscroll="scroll">
+          <view class='viewbox' wx:for="{{modifylist}}" wx:key="*" data-index="{{index}}" bindtap="toLookup" data-mold="modify">
+            <view class='viewbox-labal' style="background:orangered;" data-index="{{index}}">待修改</view>
+            <view class='row'>
+              <view class='viewbox-number'>店名：{{item.shop_name}}</view>
+              <view class='viewbox-remark'></view>
+            </view>
+            <view class='row'>
+              <view class="viewbox-address"><text decode="{{true}}">地址：{{item.address}}</text></view>
+            </view>
+          </view>
+
+          <view style="height:10px"></view>
+        </scroll-view>
+      </view>
+    </view>
+
+  </view>
+</view>

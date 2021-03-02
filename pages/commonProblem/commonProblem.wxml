@@ -1,0 +1,96 @@
+<view class="cu-chat" style="padding-top: 100rpx;padding-bottom: 66rpx;">
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>怎么参加优惠活动？</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url({{userUrl}});"></view>
+  </view>
+
+  <view class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url({{shelleyUrl}});"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>操作步骤：
+          进入【雪莱特智能LED车灯】小程序-底部导航栏的【活动】-点击活动海报-【发起拼团】，届时会弹窗提示您已参与活动，活动完成后即可获得优惠券。
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>什么是拼团优惠券？怎么用？</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url({{userUrl}});"></view>
+  </view>
+
+  <view class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url({{shelleyUrl}});"></view>
+    <view class="main">
+      <view class="content shadow" bindtap="toActivityRules">
+        <text>拼团优惠券是【雪莱特智能LED车灯】小程序特有的优惠券，通过参与拼团活动获取，拼团成功后即可激活使用。
+          使用方法：
+          进入雪莱特小程序-底部导航栏的【我的】-【我的卡券】-【立即使用】-核验对应门店码-线下支付优惠后价格。
+          <text class="bg">具体详见[卡券使用规则]</text>
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item self">
+    <view class="main">
+      <view class="content bg-green shadow">
+        <text>我要用好几张优惠券怎么办？</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url({{userUrl}});"></view>
+  </view>
+
+  <view class="cu-item">
+    <view class="cu-avatar radius" style="background-image:url({{shelleyUrl}});"></view>
+    <view class="main">
+      <view class="content shadow">
+        <text>同类型优惠券单个商品订单不能叠加使用。而对于可叠加使用的优惠券，可选取其中一张进行使用，并在【核验门店码】的弹窗中勾选【合并使用】。
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item self" style="position: relative;">
+    <view class="main" bindtap="toHelpAndFeedback">
+      <view class="content bg-green shadow">
+        <text class="bg">我还有更多问题要反馈</text>
+      </view>
+    </view>
+    <view class="cu-avatar radius" style="background-image:url({{userUrl}});"></view>
+
+    <view class="icon-item" bindtap="toHelpAndFeedback">
+      <image src="https://img12.360buyimg.com/ddimg/jfs/t1/167582/2/2213/69928/5ffe8ec7E9089ae3c/4f5dce977ae46798.png"></image>
+    </view>
+  </view>
+
+</view>
+
+<view class="customer-wrapper">
+  <view class="customer-wrap">
+    <view class="img-item">
+    <text class="iconfont iconkefu" style="font-size: 56rpx;color: rgb(46, 113, 196);"></text>
+  </view>
+  <view class="customer-item" wx:if="{{flag}}">以下问题是否能帮到您？</view>
+  <view class="customer-item" wx:else>谢谢您的肯定，我们会努力给您带来更好的体验~</view>
+  <view class="customer-but column justify-center align-center" hidden="{{hidden}}">
+    <view class="but-wrap">
+      <view class="but">
+        <button bindtap="showtype">能</button>
+      </view>
+      <view class="but-customer">
+        <button open-type="contact">不能，转人工</button>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+<authorize id="authorize" />
+<view class="reserveStoreContainer" wx:if="{{complete}}" style=" padding-bottom: {{bottom}};">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="header-imgItem">
+      <image src="https://img12.360buyimg.com/ddimg/jfs/t1/153682/20/13354/12467/5ff678e2E67db20c6/c7385673680b583f.png" mode="widthFix"></image>
+    </view>
+    <view class="header-wrap">
+      <view class="search">
+        <text class="iconfont icondingwei4"></text>
+        <input type="text" value="{{address}}" bindtap="chooseLocation" placeholder="请选择地址" style="position:relative;right:30rpx;" />
+      </view>
+
+      <view class="poster-item">
+        <image mode="widthFix" src="https://img11.360buyimg.com/ddimg/jfs/t1/170972/25/1385/108871/5ff6799cEb897f493/dea150afcdb9503b.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="title-item">
+    <text class="iconfont icondingwei"></text>
+    <view class="title-tagItem">附近门店</view>
+  </view>
+  <view class="store-mainItem">
+    <view class="store-boxItem"  wx:for="{{list}}" wx:key="id"  data-index="{{index}}"  bindtap="toStoreAppointment" style="background: url({{item.bg}}) no-repeat;background-size: 100% 100%;">
+      <view class="store-wrapItem">
+        <view class="store-mainLeft">
+          <view class="store-titleItem">{{item.shop_name}}</view>
+          <view class="store-address">{{item.address}}{{item.detail}}</view>
+          <view class="store-tagItem">
+            <view class="store-tag">认证商家</view>
+            <view class="store-tag" style="margin-left: 20rpx;">{{item.distance}}km</view>
+          </view>
+        </view>
+        <view class="store-imgItem">
+          <image src="{{item.shop_img}}"></image>
+          <view class="msg-item" wx:if="{{item.gift||item.re_using}}">预约好礼</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tag-item" hidden="{{hiddenFlag}}">
+    <view class="tag">暂无更多门店</view>
+  </view>
+  <!-- <view style="height:100px;"></view> -->
+</view>
+
+<!-- 导航栏 -->
+<tabbar id="getJudgment" tabbar="{{tabbar}}"></tabbar>
+<view class='load-progress {{loadProgress!=0?"show":"hide"}}' style="top:{{CustomBar}}px;z-index:1000;">
+  <view class='load-progress-bar bg-green' style="transform: translate3d(-{{100-loadProgress}}%, 0px, 0px);height:8rpx;background-color:#07BE02;"></view>
+  <view class='load-progress-spinner text-green' style="color:#07BE02;"></view>
+</view>

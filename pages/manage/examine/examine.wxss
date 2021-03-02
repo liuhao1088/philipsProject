@@ -1,0 +1,30 @@
+/* pages/manage/examine/examine.wxss */
+@import '../user/user.wxss';
+.center{
+  display: flex;justify-content: center;align-items: center;
+}
+.weui-tab{
+  margin-top:0px;width:100%;
+}
+.weui-navbar__slider{
+  z-index: 7;display: flex;background: orangered;width:25%;
+}
+.weui-navbar__title{
+  font-size:14px;z-index: 11;
+}
+.weui-navbar__item{
+  z-index: 10;
+}
+.weui-bar__item_on{
+  z-index: 12;
+}
+.weui-navbar{
+  background:white;height:42px;border:none;
+}
+.weui-tab__panel{
+  width:100%;
+}
+
+.viewbox-labal{
+  padding:10rpx 20rpx;border-radius:10rpx;color:white;font-size:20rpx;position:absolute;right:15px;top:10px;
+}

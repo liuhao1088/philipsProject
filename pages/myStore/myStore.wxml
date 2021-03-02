@@ -1,0 +1,57 @@
+<wxs src="../../utils/util.wxs" module="utils" />
+<view class="myStoreContainer">
+  <view class="banner">
+    <image src="{{storeImg}}">
+    </image>
+  </view>
+  <view class="wrapper">
+    <view class="wrapper-menu">
+      <view class="topbar-item" bindtap="toStoreInformation">
+        <view class="topbar-icon">
+          <text class="iconfont iconstore-fill icon"></text>
+        </view>
+        <view class="topbar-guild">
+          <view class="topbar-title">门店管理</view>
+          <view class="topbar-msg">点击修改门店信息</view>
+        </view>
+      </view>
+
+      <view class="topbar-item" bindtap="toActivityDetails">
+        <view class="topbar-icon">
+          <text class="iconfont iconflag icon"></text>
+        </view>
+        <view class="topbar-guild">
+          <view class="topbar-title">活动配置</view>
+          <view class="topbar-msg">点击修改门店信息</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="wrapper-main">
+      <view class="title-item">直播</view>
+      <view class="live-content" wx:for="{{list}}">
+        <view class="live-date">
+          <view class="live-wrap">
+            <view class="date-item">{{utils.cn(item.date)}}</view>
+            <view class="date-item">{{utils.getDates(item.date)}}</view>
+            <view class="date-item">{{utils.hor(item.date)}}</view>
+          </view>
+          <view class="date-tag" style="height:{{item.line >1 ? '236':'196'}}rpx"></view>
+
+        </view>
+
+        <view class="live-main">
+          <image class="live-img" src="{{item.live_img}}" />
+          <view class="live-title row" style="display:{{animation?'':'none'}}">
+            <view class="marquee" style=""><view class="content">　　{{item.title}}　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+            </view></view>
+            <view class="live-but">
+              <button>点击预约</button>
+            </view>
+          </view>
+          <view class="live-msg">{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

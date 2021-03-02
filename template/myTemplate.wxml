@@ -1,11 +1,10 @@
 <template name="detail">
-  <view class="container">
-    <image src="{{url}}" mode="widthFix"></image>
-    <view class="wrapper" style="top: {{top}};">
 
-      <view class="wrapper-item" wx:for="{{urlList}}" wx:key="id" bindtap="toProduct" data-index="{{index}}">
-        <image src="{{item}}" mode="widthFix"></image>
-      </view>
+  <image src="{{url}}" mode="widthFix"></image>
+  <view class="wrapper" style="top: {{top}};">
+
+    <view class="wrapper-item" wx:for="{{urlList}}" wx:key="id" bindtap="toProduct" data-index="{{index}}">
+      <image src="{{item}}" mode="widthFix"></image>
     </view>
   </view>
 </template>
@@ -13,16 +12,14 @@
 <template name="detailContent">
   <view class="container">
     <view class="header">
-    <image src="{{headerUrl}}"
-      mode="widthFix"></image>
-  </view>
+      <image src="{{headerUrl}}" mode="widthFix"></image>
+    </view>
 
-  <view class="detail-wrapper column justify-center align-center" style="padding-top: 0;">
-    <view class="detail-imgItem" wx:for="{{detailUrl}}" wx:key="id">
-      <image src="{{item}}"
-        mode="widthFix" style="border-radius: 10rpx;"></image>
+    <view class="detail-wrapper column justify-center align-center" style="padding-top: 0;">
+      <view class="detail-imgItem" wx:for="{{detailUrl}}" wx:key="id">
+        <image src="{{item}}" mode="widthFix" style="border-radius: 10rpx;"></image>
+      </view>
     </view>
   </view>
-  </view>
- 
+
 </template>

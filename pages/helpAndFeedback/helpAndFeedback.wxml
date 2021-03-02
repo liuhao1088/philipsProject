@@ -1,0 +1,48 @@
+<view class="helpAndFeedbackContainer column justify-center align-center">
+  <view class="type-wrap">
+    <view class="type-item column justify-center align-center {{item.checked?'line-red':''}}" wx:for="{{typeList}}" wx:key="id"  data-index="{{index}}" bindtap="chooseCheckbox">
+      <view class="type-mainItem">
+        <view class="icon-item">
+          <text class="iconfont {{item.icon}}" style="font-size: 44rpx;"></text>
+        </view>
+        <view class="type-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="title-item" style="margin-top: 20rpx;">我要反馈</view>
+
+  <view class="wrap-item">
+    <view class="cu-form-group" style="align-items: unset;">
+      <textarea maxlength="-1" bindinput="inputContent" value="{{content}}"
+        placeholder="你要说什么..."></textarea>
+    </view>
+    <view class="img-item">
+      <view class="grid grid-square flex-sub" style="height:100%;">
+          <view class="solids" bindtap="ChooseImage" style="display:{{img.length === 0?'block':'none'}};">
+            <text class="cuIcon-cameraadd" style="color: #8799a3;" wx:if="{{img}}"></text>
+          </view>
+          <view class="solids" bindtap="ViewImage" style="display:{{img.length === 1?'block':'none'}};">
+            <image wx:for="{{img}}" wx:key="id" src="{{item}}" />
+            <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+              <text class="cuIcon-close"></text>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+
+  <view class="title-item">
+    <text>联系方式</text>  
+    <text class="contact-details">手机号/微信号/QQ号</text>
+  </view>
+
+  <view class="input-item">
+    <input type="text" bindinput="inputContact" value="{{contact}}" placeholder="请留下任意一个联系方式" />
+  </view>
+
+</view>
+
+<view class="but-item" bindtap="submit">
+  <button>提交反馈</button>
+</view>

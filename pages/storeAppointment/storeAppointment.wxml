@@ -1,0 +1,101 @@
+<view class="storeAppointmentContainer">
+  <view class="banner">
+    <swiper indicator-dots autoplay circular style="height:100%;">
+      <swiper-item>
+        <image class="banner-item" wx:for="{{data.shop_img}}" wx:key="id" src="{{item}}" style="width:100%;" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="wrap">
+    <view class="wrap-item">
+      <view class="wrap-title">
+        <view class="title-itme">{{data.shop_name}}</view>
+        <view class="wrap-date">营业时间：{{data.start_hour}} - {{data.end_hour}}</view>
+        <view class="wrap-tagItem">
+          <view class="wrap-starlight"
+            style=" background-image: linear-gradient(133deg,#f92643,#e1001f,#ee0049);color: #fff;text-align: center;">
+            认证商家</view>
+          <view class="wrap-starlight" style="margin-left: 20rpx;">星级门店</view>
+        </view>
+
+      </view>
+      <view class="wrap-tag" bindtap="openLocation">
+        <view class="title-itme" style="text-align: center;">
+          <text class="iconfont icondaohang"></text>
+        </view>
+        <view class="wrap-date" style="text-align: center;opacity: 1;">地址</view>
+      </view>
+      <view class="wrap-tag" bindtap="callphone">
+        <view class="title-itme" style="text-align: center;">
+          <text class="iconfont icondianhua1" style="font-size: 40rpx;"></text>
+        </view>
+        <view class="wrap-date" style="text-align: center;opacity: 1;">电话</view>
+        <view class="tag-border"></view>
+      </view>
+    </view>
+
+
+  </view>
+
+  <view class="experience-item">
+    预约体验
+  </view>
+
+  <view class="form-item">
+    <view class="form-title">选择商品</view>
+    <view class="form-input" bindtap="showModal" data-target="ChooseModal">
+      {{nameList}}
+    </view>
+  </view>
+  <view class="form-item" style="margin-top: 4rpx;">
+    <view class="form-title">到店时间</view>
+    <view class="form-input">
+      <rui-picker slot="flexchild" start="{{startTime}}" end="2999-12-31 00:00" value="{{startTime}}"
+            fields="minute" bindchangedatepicker="changeStartTime"></rui-picker>
+    </view>
+  </view>
+
+  <view class="experience-item" wx:if="{{data.gift}}" style="margin-top: 4rpx;">
+    预约好礼<text>截止至 {{data.act[0].end_date}}</text>
+  </view>
+  <view class="text-item" wx:if="{{data.gift}}">
+    {{data.act[0].content}}
+  </view>
+
+</view>
+
+<view class="btn-item" style="padding-bottom: {{flag?'66rpx': '30rpx'}};">
+  <button wx:if="{{isShow}}" style="display:{{reservation==''?'':'none'}}" open-type="getPhoneNumber"
+    bindgetphonenumber="getPhoneNumber">预 约</button>
+  <button wx:if="{{!isShow}}" style="display:{{reservation==''?'':'none'}}" bindtap="submit">预 约</button>
+  <button style="display:{{reservation==''?'none':''}}">已 预 约</button>
+ 
+</view>
+
+<!-- 选择商品 -->
+<view class="cu-modal bottom-modal {{modalName=='ChooseModal'?'show':''}}" bindtap="hideModal" catchtouchmove="ture">
+  <view class="cu-dialog" catchtap style="height: 580rpx;background-color: #fff;">
+    <view class="cu-bar bg-white" style="justify-content: flex-end;height: 80rpx;">
+      <view class="action text-red" bindtap="hideModal" style="margin-right: 30rpx;color: red;">确定</view>
+    </view>
+    <view class="grid padding-sm" style="height: 200rpx;padding: 0 30rpx;align-items:flex-end;">
+      <view class="cu-img">
+        <image class="cu-img" src="{{checkbox[ind].link}}"></image>
+      </view>
+      <view class="cu-description column">
+        <view style="white-space:pre;">产品介绍：
+ {{checkbox[ind].introduce}}</view>
+      </view>
+    </view>
+    <view class="grid col-3 padding-sm">
+      <view wx:for="{{checkbox}}" class="padding-xs" wx:key="id">
+        <button class="cu-btn orange lg block {{item.checked?'line-red':''}}" bindtap="ChooseCheckbox"
+          data-value="{{item.value}}" data-index="{{index}}" data-name="{{item.name}}" style="    padding: 0;">
+          {{item.name}}
+        </button>
+      </view>
+    </view>
+
+  </view>
+</view>

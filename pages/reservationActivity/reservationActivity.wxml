@@ -1,0 +1,63 @@
+<view class="reservationActivityContainer">
+  <view class="title">活动创建</view>
+  <view class="wrap">
+    <view class="wrap-titleItem">
+      <view class="wrap-title">活动标题</view>
+      <view class="wrap-input">
+        <input type="text" placeholder-class="placeholder" bindinput="inputTitle" value="{{title}}"
+          placeholder="请输入活动标题" /></view>
+    </view>
+
+    <view class="wrap-date">
+      <view class="wrap-dateItem">
+        <view class="wrap-title">
+          活动开始时间
+        </view>
+        <view class="wrap-input">
+          <rui-picker slot="flexchild" start="{{startTime}}" end="2999-12-31 00:00" value="{{startTime}}"
+            fields="minute" bindchangedatepicker="changeStartTime"></rui-picker>
+        </view>
+      </view>
+
+      <view class="wrap-dateItem">
+        <view class="wrap-title">
+          活动截止时间
+        </view>
+        <view class="wrap-input">
+          <rui-picker slot="flexchild" start="{{endTime}}" end="2999-12-31 00:00" value="{{endTime}}" fields="minute"
+            bindchangedatepicker="changeEndTime"></rui-picker>
+        </view>
+      </view>
+    </view>
+
+    <view class="wrap-textareaItem">
+      <view class="wrap-title">
+        预约好礼
+      </view>
+      <view class="wrap-textarea">
+        <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="inputContent" value="{{content}}"
+          ></textarea>
+      </view>
+    </view>
+
+    <view class="wrap-textareaItem" bindtap="submit">
+      <view class="but-item">
+        <button class="cu-btn round bg-blue button-hover" bindtap="submit">{{transmit==''?'发布活动':'保存活动'}}</button>
+      </view>
+    </view>
+
+  </view>
+  <view class="title">活动预览</view>
+  <view class="wrap column justify-center align-center">
+    <view class="preview-item">
+      <image mode="widthFix"
+        src="https://img10.360buyimg.com/ddimg/jfs/t1/169475/15/1750/35824/5ff90cccE1bd3023c/5a195cb79b3958fa.jpg">
+      </image>
+    </view>
+    <view class="preview-item" style="width: 90%;margin-top: 30rpx;">
+      <image mode="widthFix"
+        src="https://img12.360buyimg.com/ddimg/jfs/t1/152780/31/15359/450259/60080003E87d83226/192cca3d68c98ba1.png">
+      </image>
+    </view>
+  </view>
+</view>

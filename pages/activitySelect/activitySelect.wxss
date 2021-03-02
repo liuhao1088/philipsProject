@@ -1,0 +1,46 @@
+page{
+  background-color: #f0f0f0;
+}
+
+.activitySelectContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 50%;
+  border: 0rpx solid red;
+}
+
+.but {
+  height: 120rpx;
+  width: 100%;
+}
+
+.cu-btn{
+  height: 100%;
+  width: 100%;
+  line-height: 120rpx;
+  border-radius: 60rpx;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 2rpx 4rpx 10rpx 0 rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 44rpx;
+}
+
+.footer{
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+}
+
+image{
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+

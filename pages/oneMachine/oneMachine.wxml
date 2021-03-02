@@ -1,2 +1,5 @@
 <import src="/template/myTemplate.wxml"></import>
-<template is="detail" data="{{...item}}"></template>
+<view class="container">
+  <template is="detail" data="{{...item}}"></template>
+</view>
+

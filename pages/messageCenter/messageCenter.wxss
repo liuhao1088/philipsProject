@@ -1,0 +1,167 @@
+page {
+  background-color: #f0f0f0;
+}
+button {
+  background-color: transparent;
+  padding-left: 0rpx;
+  font-size:28rpx;
+  width:130rpx;
+  justify-content: left;
+  padding-right: 0;
+  border-radius:0;
+  line-height:inherit;
+}
+button::after {
+  border: none;
+}
+
+.clear-item {
+  width: 90%;
+  height: 40rpx;
+  margin-top: 20rpx;
+  border: 0rpx solid red;
+}
+
+.clear-main {
+  height: 100%;
+  line-height: 40rpx;
+  white-space: pre-wrap;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 28rpx;
+  float: right;
+}
+
+.cu-list.menu-avatar {
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.cu-list.menu-avatar>.cu-item {
+  height: 130rpx;
+  justify-content: center;
+  margin-top: 10rpx;
+  background-color: white;
+}
+
+.bg-grey {
+  background-color: #8799a3;
+  color: white;
+}
+
+.bg-red {
+  background-image: linear-gradient(133deg, #f92643, #e1001f, #ee0049);
+  color: white;
+}
+
+.message-wrap {
+  width: 90%;
+  height: 100%;
+  color: rgb(16, 16, 16);
+  border: 0rpx solid red;
+}
+
+.title-item {
+  width: 100%;
+  height: 44rpx;
+  line-height: 44rpx;
+  border: 0rpx solid black;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.date-item {
+  font-size: 20rpx;
+}
+
+.mag-item {
+  width: 100%;
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10rpx;
+}
+
+/* 弹窗 */
+.cu-dialog{
+  padding-bottom: 60rpx;
+  background-color: #fff;
+}
+
+.wrapper-process {
+  width: 75%;
+  margin: auto;
+  text-align: left;
+}
+
+.wrap-process {
+  width: 100%;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  white-space:pre-wrap;
+  margin-top:20rpx;
+}
+
+.wrap-process text{
+  margin-left: 10rpx;
+  
+}
+
+.cu-imgItem{
+  width: 100%;
+  height: 150rpx;
+  background-color: black;
+  margin-top:20rpx;
+}
+
+
+.tag-item {
+  width: 60%;
+  height: 28rpx;
+  border: 0rpx solid red;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.tag {
+  height: 100%;
+  line-height: 28rpx;
+  color: rgb(200, 200, 200);
+  font-size: 20rpx;
+}
+
+.tag::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0px;
+  width: calc(60% - 120rpx);
+  border-bottom: 1px solid #ccc;
+  left: 0;
+  top: 50%;
+  z-index: 0;
+}
+
+.tag::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0px;
+  width: calc(60% - 120rpx);
+  border-bottom: 1px solid #ccc;
+  right: 0;
+  top: 50%;
+  z-index: 0;
+}

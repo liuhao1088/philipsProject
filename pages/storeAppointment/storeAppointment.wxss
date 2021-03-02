@@ -1,0 +1,225 @@
+page {
+  background-color: #f2f2f2;
+}
+
+.storeAppointmentContainer {
+  color: #000;
+  padding-bottom: 180rpx;
+}
+
+.banner {
+  width: 100%;
+  height: 400rpx;
+}
+
+.banner-item {
+  height: 100%;
+  background-color: #baf;
+}
+
+.wrap {
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 20rpx;
+  display: flex;
+}
+
+.wrap-item {
+  width: 90%;
+  height: 100%;
+  border: 0rpx solid #bfa;
+  margin: auto;
+  display: flex;
+  padding: 40rpx 0;
+}
+
+.wrap-title {
+  flex: 1;
+  border: 0rpx solid bisque;
+}
+
+.wrap-tag {
+  height: 100%;
+  width: 110rpx;
+  border: 0rpx solid red;
+  float: right;
+  position: relative;
+  color: #f92643;
+}
+
+.title-itme {
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 36rpx;
+  border: 0rpx solid black;
+}
+
+.navigation-item {
+  height: 160rpx;
+  width: 110rpx;
+  border: 0rpx solid #fff;
+  text-align: center;
+}
+
+.tag-itme {
+  width: 100%;
+  line-height: 40rpx;
+  background-color: #5B62D9;
+  font-size: 20rpx;
+  border-radius: 4rpx;
+  margin-top: 6rpx;
+}
+
+.wrap-date {
+  width: 100%;
+  line-height: 34rpx;
+  border: 0rpx solid bisque;
+  opacity: 0.5;
+  font-size: 24rpx;
+  margin-top: 6rpx;
+  float: left;
+}
+
+.wrap-starlight {
+  line-height: 36rpx;
+  border: 2rpx solid #f92643;
+  border-radius: 2rpx;
+  font-size: 20rpx;
+  margin-top: 6rpx;
+  float: left;
+  padding: 0 10rpx;
+  color: #f92643;
+}
+
+.experience-item {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border: 0rpx solid red;
+  padding-left: 40rpx;
+  color: #000;
+  font-size: 36rpx;
+}
+
+.experience-item text {
+  color: rgba(16, 16, 16, 0.5);
+  font-size: 24rpx;
+  float: right;
+  margin-right: 40rpx;
+  
+}
+
+.form-item {
+  height: 124rpx;
+  width: 100%;
+  padding: 0 40rpx;
+  background-color: #fff;
+  display: flex;
+  line-height: 124rpx;
+}
+
+.text-item {
+  width: 100%;
+  line-height: 40rpx;
+  padding: 20rpx 40rpx 120rpx 40rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+}
+
+.form-title {
+  width: 200rpx;
+  font-size: 36rpx;
+  border: 0rpx solid #fff;
+}
+
+.form-input {
+  flex: 1;
+  border: 0rpx solid black;
+  color: #000;
+  font-size: 28rpx;
+  text-align: right;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time-picker {
+  height: 100%;
+  width: 100%;
+
+}
+
+/* 预约 */
+.btn-item {
+  width: 100%;
+  padding: 30rpx 0;
+  border-top: 2rpx solid #e8e8e8;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.btn-item button {
+  height: 80rpx;
+  width: 90%;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  background-image: linear-gradient(133deg, #f92643, #e1001f, #ee0049);
+  color: #fff;
+}
+
+.cu-btn.lg {
+  font-size: 24rpx;
+}
+
+
+.cu-img {
+  height: 100%;
+  width: 200rpx;
+  background-color: white;
+  float: left;
+  border-radius: 10rpx;
+}
+
+.cu-img image {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.cu-description {
+  flex: 1;
+  text-align: left;
+  padding-left: 20rpx;
+  padding-bottom: 10rpx;
+  font-size: 24rpx;
+}
+
+.wrap-tagItem {
+  width: 100%;
+  height: 36rpx;
+  float: left;
+  margin-top: 10rpx;
+
+}
+
+.tag-border {
+  height: 60%;
+  width: 2rpx;
+  position: absolute;
+  top: 22rpx;
+  left: 0;
+  background-color: rgba(225, 0, 31, 0.45);
+}
+
+.line-red {
+  color: #f92643;
+}

@@ -1,0 +1,26 @@
+<view class="allStoreContainer">
+  <view class="wrap">
+    <view class="address">
+      <text class="iconfont icondingwei"></text>
+      <view class="address-item">{{addr}}</view>
+    </view>
+    <view class="search">
+      <input type="text" placeholder="请输入门店码/门店名称关键字查询" value="{{search}}" bindinput="inputSearch" bind placeholder-class="placeholder" />
+    <text class="iconfont iconziyuan searchIcon" bindtap="search"></text>
+    </view>
+  </view>
+
+  <view class="main" wx:for="{{list}}">
+    <view class="main-topItem">
+      <view class="title-item">{{item.shop_name}}</view>
+      <view class="tag-item">门店码：{{item.code}}</view>
+    </view>
+    <view class="main-item">
+      地址：{{item.address}}{{item.detail}}
+    </view>
+    <view class="main-item">
+      电话：{{item.phone}}
+    </view>
+  </view>
+
+</view>

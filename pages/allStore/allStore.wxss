@@ -21,7 +21,7 @@ page {
   height: 100%;
   border: 0rpx solid floralwhite;
   display: flex;
-  color: #f92643;
+  color: var(--darkBlue);
 }
 
 .address text {
@@ -64,7 +64,7 @@ page {
   font-size: 26rpx;
   line-height: 60rpx;
   float: right;
-  color: rgba(249,38,0, 0.5);
+  color: var(--navyBlueShadow);
 }
 
 .main {
@@ -91,7 +91,7 @@ page {
 .tag-item {
   float: right;
   opacity: 0.5;
-  color:rgba(249,38,0, 0.5);
+  color:var(--navyBlueShadow);
   font-size: 32rpx;
   font-weight: bold;
 }

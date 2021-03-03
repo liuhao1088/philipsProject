@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/home/home",
     "pages/wode/wode",
     "pages/commonProblem/commonProblem",
-    "pages/index/index",
     "pages/brandReservationActivity/brandReservationActivity",
     "pages/brandGroupActivity/brandGroupActivity",
     "pages/text/text",

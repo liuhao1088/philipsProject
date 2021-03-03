@@ -56,13 +56,13 @@
 }
 
 .modal-detail .txt-clr {
-  color: #5B62D9;
+  color: var(--darkBlue);
 }
 
 .btn1 {
   width: 80%;
   margin-top: 20rpx;
-  background-color: #5B62D9;
+  background-image: var(--gradualBlue);
   color: white;
   border-radius: 98rpx;
   display: flex;

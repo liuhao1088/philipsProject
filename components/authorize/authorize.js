@@ -98,7 +98,7 @@ Component({
                         limit: 1
                       }
                     }).then(res => {
-                      console.log(res.result.list)
+                      //console.log(res.result.list)
                       let user = res.result.list[0];
                       wx.setStorageSync('userInfo', user)
                       if (res.result.list.length == 0) {

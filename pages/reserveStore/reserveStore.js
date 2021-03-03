@@ -76,7 +76,7 @@ Page({
       pro++;
     } while (pro < 95)
     var BMap = new bmap.BMapWX({
-      ak: 'yLnHh2rGyFiou5kZGVMtP0LLKWrXfr0i'
+      ak: 'g1dsEsatrliHlvr8tIDcvjY22mnBPcFD'
     });
     wx.getLocation({
       success(res) {

@@ -1,30 +1,7 @@
 <import src="/template/myTemplate.wxml"></import>
 <view class="container" bindlongpress="toManage" style="padding-bottom: {{bottom}};">
-<template is="detail" data="{{...item}}"></template>
-  <!-- <view class="swiper-wrapper">
-    <view class="header">
-      <view class="header-img">
-        <image mode="widthFix"
-          src="https://img11.360buyimg.com/ddimg/jfs/t1/159814/26/2432/218621/5ff90ff5E6fa81915/760fc9a612d288f5.jpg">
-        </image>
-      </view>
-    </view>
-    <view class="wrap-productItem">
-      <view class="product-imgItem">
-        <view class="product-img" wx:for="{{url}}" wx:key="id" id="{{index}}" bindtap="toSubnav">
-          <image src="{{item}}" mode="widthFix"></image>
-        </view>
-      </view>
-    </view>
-
-    <view class="img-item">
-      <image bindtap="toVideo" mode="widthFix"
-        src="https://img10.360buyimg.com/ddimg/jfs/t1/126165/29/19314/16926/5fb78030E8d012bf0/959f408d5cc14b9b.png">
-      </image>
-    </view>
-
-  </view> -->
+  <template is="detail" data="{{...item}}"></template>
 </view>
 
 <!-- 导航栏 -->
-<tabbar  id="getJudgment" tabbar="{{tabbar}}"></tabbar>
+<tabbar id="getJudgment" tabbar="{{tabbar}}"></tabbar>

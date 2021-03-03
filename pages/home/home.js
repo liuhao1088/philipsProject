@@ -6,7 +6,7 @@ Page({
    */
   data: {
     item:{
-      url:'https://img10.360buyimg.com/ddimg/jfs/t1/161197/27/8128/1014289/603861a6E9a01c853/9bf3e5581b4cde03.jpg',
+      url:'https://img11.360buyimg.com/ddimg/jfs/t1/169811/15/8941/69807/603ee207E64bdf5e5/2e9e614b5e00f5b1.jpg',
       top:'',
       urlList:[
         'https://img14.360buyimg.com/ddimg/jfs/t1/165194/35/8271/64652/60389bb7E22b51561/fdf33ca9a472ec69.png',
@@ -36,7 +36,7 @@ Page({
     let height = app.globalData.height;
     let top = 'item.top';
     console.log(height);
-    if(height<800){
+    if(height<700){
       this.setData({
         [top]:'60%'
       })
@@ -56,11 +56,11 @@ Page({
     this.selectComponent("#getJudgment").getJudgment(isIphoneX,isIphone11,isIphone12);
     if(isIphoneX === true || isIphone11 === true || isIphone12 === true){
       this.setData({
-        bottom:'220rpx'
+        bottom:'0rpx'
       })
     }else{
       this.setData({
-        bottom:'150rpx'
+        bottom:'0rpx'
       })
     }
     if (wx.getStorageSync('userInfo')) {

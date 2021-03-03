@@ -44,5 +44,5 @@
 </view>
 
 <view class="but-item" bindtap="submit">
-  <button>提交反馈</button>
+  <button class="global-but">提交反馈</button>
 </view>

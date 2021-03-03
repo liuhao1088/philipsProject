@@ -111,7 +111,7 @@
 </view>
 
 <view class="but-item  column justify-center align-center" style="padding-bottom: {{bottom}}">
-  <button style="width: 80%;line-height: 80rpx;" hover-class="but-hover"
+  <button style="width: 80%;line-height: 80rpx;" class="global-but" hover-class="but-hover"
     bindtap="submit">{{transmit==''?'提交认证':'修改信息'}}</button>
 </view>
 

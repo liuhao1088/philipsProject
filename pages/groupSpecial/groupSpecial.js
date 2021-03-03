@@ -560,7 +560,7 @@ Page({
     console.log(e)
     if (wx.getStorageSync('userInfo')) {
       wx.requestSubscribeMessage({
-        tmplIds: ['Ggdc3CQ1c6V0ss6ZvsMnExScZjPHZ0-8_OFdCJRTubA'],
+        tmplIds: ['O82BJT4zeFnxLDDSlhMvBpgKiRK1beThcPH6oOI9glA'],
         success(res) {
           console.log(res)
           if (JSON.stringify(res).indexOf('accept') !== -1) {
@@ -607,7 +607,7 @@ Page({
             "value": shop
           },
         },
-        templateId: 'Ggdc3CQ1c6V0ss6ZvsMnExScZjPHZ0-8_OFdCJRTubA'
+        templateId: 'O82BJT4zeFnxLDDSlhMvBpgKiRK1beThcPH6oOI9glA'
       }
     }).then(res => {})
   },

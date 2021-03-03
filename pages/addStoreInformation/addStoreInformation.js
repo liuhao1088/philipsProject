@@ -69,12 +69,16 @@ Page({
     })
   },
   hideModal(e) {
-    let string = this.data.address + this.data.detail;
-    let label = '...' + string.substring(string.length - 7, string.length)
+    if(this.data.modalName=='addressConfirm'){
+      let string = this.data.address + this.data.detail;
+      let label = '...' + string.substring(string.length - 7, string.length)
+      this.setData({
+        address_label: label
+      })
+    }
     this.setData({
       modalName: null,
       z: -1,
-      address_label: label
     })
   },
 
@@ -307,7 +311,7 @@ Page({
           } else {
             if (that.data.shop_name !== "" && that.data.address !== "" && that.data.phone !== "" && that.data.shop_img !== []) {
               wx.requestSubscribeMessage({
-                tmplIds: ['pvZ2jnDjUwfpT2bpby2SxP5P1tcl3LXcn9RfOc8ibuI', 'SKiAQj0y7dfeW194AbS_uHnRfoqxuE_kz8Y-9uKeJwM', 'Ggdc3CQ1c6V0ss6ZvsMnExScZjPHZ0-8_OFdCJRTubA'],
+                tmplIds: ['LYrMVirZLGtnnLr-QrMnEDakHTPp5wXRovCTAR0kB3g', 'dg6PSVpS4RMQCt2bFswLNZr00nFEMHiw81v_6XNKKow'],
                 success(res) {
                   console.log(res)
                   if (JSON.stringify(res).indexOf('accept') !== -1) {
@@ -334,7 +338,7 @@ Page({
         } else {
           if (that.data.shop_name !== "" && that.data.address !== "" && that.data.phone !== "" && that.data.shop_img !== []) {
             wx.requestSubscribeMessage({
-              tmplIds: ['pvZ2jnDjUwfpT2bpby2SxP5P1tcl3LXcn9RfOc8ibuI', 'SKiAQj0y7dfeW194AbS_uHnRfoqxuE_kz8Y-9uKeJwM', 'Ggdc3CQ1c6V0ss6ZvsMnExScZjPHZ0-8_OFdCJRTubA'],
+              tmplIds: ['LYrMVirZLGtnnLr-QrMnEDakHTPp5wXRovCTAR0kB3g', 'dg6PSVpS4RMQCt2bFswLNZr00nFEMHiw81v_6XNKKow'],
               success(res) {
                 console.log(res)
                 if (JSON.stringify(res).indexOf('accept') !== -1) {
@@ -362,7 +366,7 @@ Page({
       } else {
         //修改
         wx.requestSubscribeMessage({
-          tmplIds: ['pvZ2jnDjUwfpT2bpby2SxP5P1tcl3LXcn9RfOc8ibuI', 'SKiAQj0y7dfeW194AbS_uHnRfoqxuE_kz8Y-9uKeJwM', 'Ggdc3CQ1c6V0ss6ZvsMnExScZjPHZ0-8_OFdCJRTubA'],
+          tmplIds: ['LYrMVirZLGtnnLr-QrMnEDakHTPp5wXRovCTAR0kB3g', 'dg6PSVpS4RMQCt2bFswLNZr00nFEMHiw81v_6XNKKow'],
           success(res) {
             console.log(res)
             if (JSON.stringify(res).indexOf('accept') !== -1) {

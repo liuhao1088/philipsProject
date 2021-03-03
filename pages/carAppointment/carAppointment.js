@@ -153,7 +153,7 @@ Page({
     var ind = e.currentTarget.dataset.index;
     let userInfo = wx.getStorageSync('userInfo')
     wx.requestSubscribeMessage({
-      tmplIds: ['SKiAQj0y7dfeW194AbS_uHnRfoqxuE_kz8Y-9uKeJwM'],
+      tmplIds: ['dg6PSVpS4RMQCt2bFswLNZr00nFEMHiw81v_6XNKKow'],
       success(res) {
         let nowDate = util.formatTime(new Date());
         if (JSON.stringify(res).indexOf('accept') !== -1) {
@@ -270,7 +270,7 @@ Page({
       return
     }
     wx.requestSubscribeMessage({
-      tmplIds: ['SKiAQj0y7dfeW194AbS_uHnRfoqxuE_kz8Y-9uKeJwM'],
+      tmplIds: ['dg6PSVpS4RMQCt2bFswLNZr00nFEMHiw81v_6XNKKow'],
       success(res) {
         if (JSON.stringify(res).indexOf('accept') !== -1) {
           wx.showLoading({

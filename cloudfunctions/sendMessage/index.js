@@ -1,5 +1,8 @@
 const cloud = require('wx-server-sdk')
-cloud.init()
+cloud.init({
+  env: 'philips-9g4l4ppe860eed98',
+  traceUser: true
+})
 exports.main = async (event, context) => {
   try {
     const result = await cloud.openapi.subscribeMessage.send({

@@ -246,7 +246,7 @@ Page({
     }
     
     wx.requestSubscribeMessage({
-      tmplIds: ['-m92htbt5V0SlqRwZaMZAy9l3mv3CNseLM-yDKlRG5g', 'SVnl7juS4DJeu57ZvCHsFtWrp3y1bfTT7_rbv36mXY0', 'GN7JfS1q9N7eqdmvOxcFY6kjBBrUsnyRc6UGr58LAwg'],
+      tmplIds: ['RvEz0NmPhCyvj4Tf4E7Zn45l1voHDJl4aCI1dsSalk8', 'hc9gsMXBhMFYn4zmoOvJkMYijrCaFIoIutJNFZrWaHU'],
       success(res) {
         if (JSON.stringify(res).indexOf('accept') !== -1) {
           console.log(that.data.nameList)
@@ -360,7 +360,7 @@ Page({
             "value": content
           },
         },
-        templateId: 'SKiAQj0y7dfeW194AbS_uHnRfoqxuE_kz8Y-9uKeJwM'
+        templateId: 'dg6PSVpS4RMQCt2bFswLNZr00nFEMHiw81v_6XNKKow'
       }
     }).then(res => {})
   },

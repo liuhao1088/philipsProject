@@ -224,16 +224,16 @@ Page({
     switch (this.data.list[ind].type) {
       case 're':
         if (this.data.list[ind].res == 'success') {
-          tpid = ['-m92htbt5V0SlqRwZaMZAy9l3mv3CNseLM-yDKlRG5g']
+          tpid = ['RvEz0NmPhCyvj4Tf4E7Zn45l1voHDJl4aCI1dsSalk8']
         } else {
-          tpid = ['SVnl7juS4DJeu57ZvCHsFtWrp3y1bfTT7_rbv36mXY0']
+          tpid = ['hc9gsMXBhMFYn4zmoOvJkMYijrCaFIoIutJNFZrWaHU']
         }
         break;
       case 'check':
-        tpid = ['pvZ2jnDjUwfpT2bpby2SxP5P1tcl3LXcn9RfOc8ibuI']
+        tpid = ['LYrMVirZLGtnnLr-QrMnEDakHTPp5wXRovCTAR0kB3g']
         break;
       case 'myre':
-        tpid = ['-m92htbt5V0SlqRwZaMZAy9l3mv3CNseLM-yDKlRG5g', 'SVnl7juS4DJeu57ZvCHsFtWrp3y1bfTT7_rbv36mXY0', 'GN7JfS1q9N7eqdmvOxcFY6kjBBrUsnyRc6UGr58LAwg']
+        tpid = ['RvEz0NmPhCyvj4Tf4E7Zn45l1voHDJl4aCI1dsSalk8', 'hc9gsMXBhMFYn4zmoOvJkMYijrCaFIoIutJNFZrWaHU', 'dg6PSVpS4RMQCt2bFswLNZr00nFEMHiw81v_6XNKKow']
         break;
     }
     wx.requestSubscribeMessage({

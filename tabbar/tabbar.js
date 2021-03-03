@@ -10,7 +10,7 @@ Component({
       value: {
         "backgroundColor": "#ffffff",
         "color": "#979795",
-        "selectedColor": "#f92643",
+        "selectedColor": "#0083C6",
         "list": [
           {
             "pagePath": "/pages/home/home",
@@ -27,8 +27,7 @@ Component({
           {
             "pagePath": "/pages/index/index",
             "selectedIconPath": "icon/huodong.png",
-            "isSpecial": true,
-            "text": "活动"
+            "isSpecial": true
           },
           {
             "pagePath": "/pages/reserveStore/reserveStore",

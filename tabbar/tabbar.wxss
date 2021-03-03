@@ -56,9 +56,10 @@
 }
 
 .special-wrapper .tabbar_icon {
-  width: 60rpx;
-  height: 60rpx;
-  margin-top: 14rpx;
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 4rpx;
+  border-radius: 50%;
 }
 
 .special-text-wrapper {

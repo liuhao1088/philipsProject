@@ -44,7 +44,7 @@
   "tabBar": {
     "backgroundColor": "#ffffff",
     "color": "#979795",
-    "selectedColor": "#f92643",
+    "selectedColor": "#0083C6",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -60,8 +60,7 @@
       },
       {
         "pagePath": "pages/index/index",
-        "selectedIconPath": "tabbar/icon/huodong.png",
-        "text": "活动"
+        "selectedIconPath": "tabbar/icon/huodong.png"
       },
       {
         "pagePath": "pages/reserveStore/reserveStore",

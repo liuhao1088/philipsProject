@@ -68,7 +68,7 @@ button::after {
 .wrap-tag {
   padding: 0rpx 20rpx;
   height: 100%;
-  color: rgb(0,131,198);
+  color: var(--darkBlue);
   font-size: 28rpx;
   border: 0rpx solid black;
 }
@@ -96,12 +96,12 @@ button::after {
 
 
 .cancel {
-  border: 2rpx solid rgb(0,131,198);
-  color: rgb(0,131,198);
+  border: 2rpx solid var(--darkBlue);
+  color: var(--darkBlue);
 }
 
 .accept {
-  background-color: rgb(0,131,198);
+  background-image: var(--gradualBlue);
   color: rgb(255, 255, 255);
 }
 
@@ -180,7 +180,7 @@ button::after {
 }
 
 .menuWrap-class {
-  background-color: rgb(0,131,198);
+  background-color: var(--darkBlue);
   color: #fff;
 
 }

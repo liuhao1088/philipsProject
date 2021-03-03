@@ -9,7 +9,7 @@
 /* ==================
         初始化
  ==================== */
-/* page {
+page {
 	--red: #e54d42;
 	--orange: #f37b1d;
 	--yellow: #fbbd08;
@@ -46,7 +46,7 @@
 	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
 	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
 	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
-	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+	--gradualBlue: linear-gradient(90deg, #16b0ff 0%, #0083c6 100%);
 
 	--ShadowSize: 6rpx 6rpx 8rpx;
 	--redShadow: rgba(204, 69, 59, 0.2);
@@ -63,12 +63,11 @@
 	--greyShadow: rgba(114, 130, 138, 0.2);
 	--grayShadow: rgba(114, 130, 138, 0.2);
 	--blackShadow: rgba(26, 26, 26, 0.2);
-
-	background-color: var(--ghostWhite);
-	font-size: 28rpx;
-	color: var(--black);
-	font-family: Helvetica Neue, Helvetica, sans-serif;
-} */
+	--darkBlue: rgb(0, 131, 198);
+	--darkBlueShadow: rgba(0, 131, 198, 0.3);
+	--navyDarkBlueShadow: rgba(0, 131, 198, 0.7);
+	--navyBlueShadow: rgba(0,131,198, 0.5);
+}
 
 view,
 scroll-view,
@@ -2534,11 +2533,13 @@ button.icon.lg {
 .cu-modal.drawer-modal.show .cu-dialog {
 	transform: translateX(0%);
 }
-.cu-modal .cu-dialog>.cu-bar:first-child .action{
-  min-width: 100rpx;
-  margin-right: 0;
-  min-height: 100rpx;
+
+.cu-modal .cu-dialog>.cu-bar:first-child .action {
+	min-width: 100rpx;
+	margin-right: 0;
+	min-height: 100rpx;
 }
+
 /* ==================
          轮播
  ==================== */
@@ -2996,7 +2997,7 @@ scroll-view.cu-steps .cu-item {
 .grid.col-2.grid-square>view:nth-child(2n),
 .grid.col-3.grid-square>view:nth-child(3n),
 .grid.col-4.grid-square>view:nth-child(4n),
-.grid.col-5.grid-square>view:nth-child(5n){
+.grid.col-5.grid-square>view:nth-child(5n) {
 	margin-right: 0;
 }
 
@@ -3594,10 +3595,10 @@ scroll-view.cu-steps .cu-item {
 	color: var(--white);
 }
 
-.bg-gradual-pink {
+/* .bg-gradual-pink {
 	background-image: var(--gradualPink);
 	color: var(--white);
-}
+} */
 
 .bg-gradual-blue {
 	background-image: var(--gradualBlue);

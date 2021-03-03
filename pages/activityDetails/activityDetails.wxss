@@ -33,7 +33,7 @@ page {
   border: 0rpx solid red;
   padding-left: 20rpx;
   opacity: 0.77;
-  color: rgba(0,131,198, 0.69);
+  color: var(--navyDarkBlueShadow);
   font-size: 28rpx;
 }
 
@@ -101,7 +101,7 @@ page {
 .wrap-tag {
   padding: 0rpx 20rpx;
   height: 100%;
-  color: rgba(0,131,198, 0.5);
+  color: var(--navyBlueShadow);
   font-size: 28rpx;
   border: 0rpx solid black;
 }
@@ -111,7 +111,7 @@ page {
   width: 50%;
   border: 0rpx solid red;
   display: flex;
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .but {
@@ -138,12 +138,12 @@ page {
 
 
 .cancel {
-  border: 2rpx solid rgb(0,131,198);
-  color: rgb(0,131,198);
+  border: 2rpx solid var(--darkBlue);
+  color: var(--darkBlue);
 }
 
 .accept {
-  background-color: rgb(0,131,198);
+  background-image: var(--gradualBlue);
   color: rgb(255, 255, 255);
 }
 

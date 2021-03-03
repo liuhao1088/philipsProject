@@ -44,7 +44,7 @@ page {
   border: 0rpx solid red;
   float: right;
   position: relative;
-  color: #f92643;
+  color: var(--darkBlue);
 }
 
 .title-itme {
@@ -83,13 +83,13 @@ page {
 
 .wrap-starlight {
   line-height: 36rpx;
-  border: 2rpx solid #f92643;
+  border: 2rpx solid var(--darkBlue);
   border-radius: 2rpx;
   font-size: 20rpx;
   margin-top: 6rpx;
   float: left;
   padding: 0 10rpx;
-  color: #f92643;
+  color: var(--darkBlue);
 }
 
 .experience-item {
@@ -170,7 +170,7 @@ page {
   width: 90%;
   line-height: 80rpx;
   border-radius: 10rpx;
-  background-image: linear-gradient(133deg, #f92643, #e1001f, #ee0049);
+  background-image: var(--gradualBlue);
   color: #fff;
 }
 
@@ -217,9 +217,9 @@ page {
   position: absolute;
   top: 22rpx;
   left: 0;
-  background-color: rgba(225, 0, 31, 0.45);
+  background-color: var(--darkBlueShadow);
 }
 
 .line-red {
-  color: #f92643;
+  color: var(--darkBlue);
 }

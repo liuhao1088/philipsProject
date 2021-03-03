@@ -46,7 +46,7 @@ button::after {
 .wrap-title {
   height: 100%;
   width: 200rpx;
-  color: rgba(16, 16, 16, 100);
+  color: rgb(16, 16, 16);
   font-size: 32rpx;
   padding-left: 30rpx;
   border: 0rpx solid red;
@@ -57,7 +57,7 @@ button::after {
   flex: 1;
   border: 0rpx solid red;
   padding-left: 50rpx;
-  color: rgba(125, 125, 125, 100);
+  color: rgb(125, 125, 125);
 }
 
 .wrap-input input {
@@ -113,8 +113,8 @@ button::after {
   line-height: 80rpx;
   border-radius: 10rpx;
   text-align: center;
-  background-image: linear-gradient(133deg, #f92643, #e1001f, #ee0049);
-  color: rgba(255, 255, 255, 100);
+  background-image: var(--gradualBlue);
+  color: rgb(255, 255, 255);
   font-size: 28rpx;
 }
 
@@ -123,7 +123,7 @@ button::after {
   line-height: 50rpx;
   font-size: 28rpx;
   text-align: center;
-  color: rgba(16, 16, 16, 100);
+  color: rgb(16, 16, 16);
   margin-top: 20rpx;
   opacity: 0.6;
   display: flex;
@@ -173,7 +173,7 @@ button::after {
 }
 
 .line-red{
-  color: #f92643;
+  color: var(--darkBlue);
 }
 
 /* 活动预览 */

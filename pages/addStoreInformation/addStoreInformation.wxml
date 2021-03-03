@@ -18,7 +18,7 @@
             <view class="menu-tagItem">联系人姓名</view>
           </view>
           <view class="menu-msgItem">
-            <input type="text" value="" bindinput="inputPerson" placeholder="请输入您的姓名" />
+            <input type="text" value="{{person}}" bindinput="inputPerson" placeholder="请输入您的姓名" />
           </view>
         </view>
       </view>
@@ -76,7 +76,7 @@
           </view>
           <view class="menu-msgItem">
             <picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange"
-              value="{{multiIndex}}" range="{{multiArray}}">
+              value="{{multiIndex}}" range="{{multiArray}}" style="width: 100%;">
               <view class="picker" wx:if="{{firstLoading==true}}">
                 请选择时间段
               </view>
@@ -111,7 +111,7 @@
 </view>
 
 <view class="but-item  column justify-center align-center" style="padding-bottom: {{bottom}}">
-  <button style="width: 80%;line-height: 80rpx;" class="global-but" hover-class="but-hover"
+  <button style="width: 80%;line-height: 80rpx;"  hover-class="but-hover"
     bindtap="submit">{{transmit==''?'提交认证':'修改信息'}}</button>
 </view>
 
@@ -170,7 +170,7 @@
 </view>
 
 <!-- 流程 -->
-<view class="cu-modal {{noticeName=='notice'?'':'show'}}" catchtouchmove="ture">
+<!-- <view class="cu-modal {{noticeName=='notice'?'':'show'}}" catchtouchmove="ture">
   <view class="cu-dialog notice-dialog">
       <view class="notice-wrap">
         <view class="notice column justify-center align-center">
@@ -198,7 +198,7 @@
         </view>
       </view>
     </view>
-</view>
+</view> -->
 
 
 

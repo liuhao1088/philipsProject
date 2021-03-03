@@ -48,8 +48,8 @@
 }
 
 .line-red {
-  border: 2rpx solid #f92643;
-  color: #f92643;
+  border: 2rpx solid var(--darkBlue);
+  color: var(--darkBlue);
   background-color: #fff;
 }
 

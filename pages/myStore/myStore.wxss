@@ -130,13 +130,13 @@ page{
   width: 100%;
   line-height: 36rpx;
   font-size: 24rpx;
-  color: rgb(0,131,198);
   text-align: center;
+  color: var(--darkBlue);
 }
 
 .date-tag {
   width: 2rpx;
-  background-color: rgba(0,131,198, 0.3);
+  background-color: var(--darkBlueShadow);
 }
 
 .live-img {
@@ -173,9 +173,10 @@ page{
   width: 100%;
   line-height: 50rpx;
   border-radius: 30rpx;
-  background-color: rgb(0,131,198);
   font-size: 24rpx;
   color: #fff;
+  background-image: var(--gradualBlue);
+
 }
 
 .live-msg {

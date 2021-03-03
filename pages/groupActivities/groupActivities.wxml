@@ -82,11 +82,11 @@
     </view>
 
     <view class="wrap-iconItem">
-      <view class="add-item" style="color: rgba(225, 0, 31);display:{{productList.length === 1?'none':'block'}};"
+      <view class="add-item" style="color: var(--darkBlue);display:{{productList.length === 1?'none':'block'}};"
         data-idx='{{index}}' bindtap="delList">
         <text class="iconfont iconhuishouzhan" style="font-size: 24rpx;"></text>删除商品
       </view>
-      <view class="add-item" style="color: rgba(225, 0, 31, 0.6);display:{{productList[index].showView?'none':'block'}}"
+      <view class="add-item" style="color: var(--darkBlue);display:{{productList[index].showView?'none':'block'}}"
         data-idx='{{index}}' bindtap="onAdd">
         <text class="iconfont iconplus1" style="font-size: 24rpx;"></text>添加商品
       </view>
@@ -110,7 +110,7 @@
 <view class="cu-modal bottom-modal {{modalName=='chooseModal'?'show':''}}" bindtap="hideModal" catchtouchmove="ture">
   <view class="cu-dialog" catchtap style="height: 580rpx;">
     <view class="cu-bar bg-white" style="justify-content: flex-end;height: 80rpx;">
-      <view class="action text-green" bindtap="hideModal" style="margin-right: 30rpx;color: red;">确定</view>
+      <view class="action text-green" bindtap="hideModal" style="margin-right: 30rpx;color: var(--darkBlue);">确定</view>
     </view>
     <view class="grid padding-sm" style="height: 200rpx;padding: 0 30rpx;align-items:flex-end;">
       <view class="cu-img">

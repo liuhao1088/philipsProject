@@ -2,8 +2,8 @@
   <block wx:for="{{tabbar.list}}" wx:key="id">
     <navigator wx:if="{{item.isSpecial}}" class="tabbar_nav" hover-class="none" url="{{item.pagePath}}"
       open-type="switchTab">
-      <view class='special-wrapper'>
-        <image class="tabbar_icon" src="{{item.selectedIconPath}}"></image>
+      <view class='special-wrapper' style="{{item.selected ? 'background-image: linear-gradient(45deg,#2d71ba,#0c2a5c)' : ''}}">
+        <image class="tabbar_icon" src="{{item.selected ? item.iconPath : item.selectedIconPath}}"></image>
       </view>
       <image class='special-text-wrapper'></image>
       <text style="color:{{item.selected ? tabbar.selectedColor : tabbar.color}}">{{item.text}}</text>

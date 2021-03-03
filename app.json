@@ -60,6 +60,7 @@
       },
       {
         "pagePath": "pages/index/index",
+        "iconPath": "tabbar/icon/huodong-hui.png",
         "selectedIconPath": "tabbar/icon/huodong.png"
       },
       {

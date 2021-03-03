@@ -11,8 +11,7 @@ Component({
         "backgroundColor": "#ffffff",
         "color": "#979795",
         "selectedColor": "#0083C6",
-        "list": [
-          {
+        "list": [{
             "pagePath": "/pages/home/home",
             "iconPath": "icon/chanpin-hui.png",
             "selectedIconPath": "icon/chanpin.png",
@@ -26,6 +25,7 @@ Component({
           },
           {
             "pagePath": "/pages/index/index",
+            "iconPath": "icon/huodong-hui.png",
             "selectedIconPath": "icon/huodong.png",
             "isSpecial": true
           },
@@ -57,22 +57,22 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    getJudgment(isIphoneX,isIphone11,isIphone12){
+    getJudgment(isIphoneX, isIphone11, isIphone12) {
       let that = this;
       if (isIphoneX === true) {
         that.setData({
           isIphoneX: true
         })
-      }else if(isIphone11 === true){
+      } else if (isIphone11 === true) {
         that.setData({
           isIphoneX: true
         })
-      }else if(isIphone12 === true){
+      } else if (isIphone12 === true) {
         that.setData({
           isIphoneX: true
         })
       }
-      console.log("x:"+this.data.isIphoneX+"11:"+this.data.isIphone11+"12:"+this.data.isIphone12);
+      console.log("x:" + this.data.isIphoneX + "11:" + this.data.isIphone11 + "12:" + this.data.isIphone12);
     },
   }
 })

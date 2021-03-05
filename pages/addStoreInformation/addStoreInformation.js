@@ -689,6 +689,7 @@ Page({
           weRunData: wx.cloud.CloudID(e.detail.cloudID),
         }
       }).then(res => {
+        //console.log(res)
         that.setData({
           phone: res.result,
         })
@@ -717,22 +718,27 @@ Page({
             }
           })
         }
-        let userInfo = wx.getStorageSync('userInfo')
-        userInfo.phone = phone;
-        wx.setStorageSync('userInfo', userInfo)
         wx.hideLoading()
         that.hideModal();
         wx.showToast({
           title: '授权成功',
           icon: 'success'
         })
-      }).catch(error => {
-        console.log(error);
+        let userInfo = wx.getStorageSync('userInfo')
+        if(userInfo){
+          userInfo.phone = phone;
+          wx.setStorageSync('userInfo', userInfo)
+        }
+      },error=>{
+        console.log(error)
         wx.hideLoading()
         wx.showToast({
           title: '授权失败',
           icon: 'none'
         })
+      }).catch(error => {
+        console.log(error);
+        wx.hideLoading()
       })
 
     }

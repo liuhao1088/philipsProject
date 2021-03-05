@@ -46,7 +46,12 @@ page {
 	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
 	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
 	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
-	--gradualBlue: linear-gradient(90deg, #16b0ff 0%, #0083c6 100%);
+	--gradualBlue: linear-gradient(-50deg, #0038a9,#0463cd);
+	--gradualBlueOpacity: linear-gradient(-50deg, rgba(4,99,205,0.7) , rgba(0,56,169,0.7));
+	 
+	--gradualBlueText: linear-gradient(130deg, #0c368d,#056fd0);
+	--gradualBlueTag: linear-gradient(130deg, #d7e4ff,#d7ebff);
+	
 
 	--ShadowSize: 6rpx 6rpx 8rpx;
 	--redShadow: rgba(204, 69, 59, 0.2);
@@ -63,6 +68,8 @@ page {
 	--greyShadow: rgba(114, 130, 138, 0.2);
 	--grayShadow: rgba(114, 130, 138, 0.2);
 	--blackShadow: rgba(26, 26, 26, 0.2);
+
+	--darkBlueText: 	rgba(0, 56, 169);
 	--darkBlue: rgb(0, 131, 198);
 	--darkBlueShadow: rgba(0, 131, 198, 0.3);
 	--navyDarkBlueShadow: rgba(0, 131, 198, 0.7);

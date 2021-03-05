@@ -15,12 +15,12 @@
   <view class="main-wrap">
     <!-- 车主 -->
     <view class="main-item column justify-center align-center" bindtap="toMyCoupon"
-      wx:if="{{userInfo.type === 'driver'}}">
+      wx:if="{{userInfo.type === 'driver'}}" style="background: url({{butImg}}) no-repeat;background-size: 100% 100%;">
       <view class="quan-item"></view>
       <view class="main-wrapItem">
         <view class="main-imgItem">
           <image
-            src="https://img11.360buyimg.com/ddimg/jfs/t1/165278/10/1561/7495/5ff7c633E5be64ed7/7f9de69c4d09e3c3.png">
+            src="https://img11.360buyimg.com/ddimg/jfs/t1/164156/8/9475/18352/6041e070E83101d60/16edf37dfa41b592.png">
           </image>
         </view>
         <view class="main-titleItem">
@@ -31,12 +31,12 @@
     </view>
 
     <view class="main-item column justify-center align-center" bindtap="toAddStoreInformation"
-      wx:if="{{userInfo.type === 'driver'}}">
+      wx:if="{{userInfo.type === 'driver'}}" style="background: url({{butImgDeep}}) no-repeat;background-size: 100% 100%;">
       <view class="quan-item"></view>
       <view class="main-wrapItem">
         <view class="main-imgItem">
           <image
-            src="https://img12.360buyimg.com/ddimg/jfs/t1/166840/12/1523/6422/5ff7c97fE786ea65a/13ccdadd56f3a4fb.png">
+            src="https://img10.360buyimg.com/ddimg/jfs/t1/166531/23/9311/13696/6041e07dEfd32ae78/9ef1f3480a7c7f55.png">
           </image>
         </view>
         <view class="main-titleItem">
@@ -48,12 +48,11 @@
 
     <!-- 门店 -->
     <view class="main-item column justify-center align-center" bindtap="toCarAppointment"
-      wx:if="{{userInfo.type === 'shopkeeper'}}">
-      <view class="quan-item"></view>
+      wx:if="{{userInfo.type === 'shopkeeper'}}" style="background: url({{butImg}}) no-repeat;background-size: 100% 100%;">
       <view class="main-wrapItem">
         <view class="main-imgItem">
           <image
-            src="https://img13.360buyimg.com/ddimg/jfs/t1/167374/26/1551/6426/5ff7cbfeEd9a34b08/acc824dab32df99f.png">
+            src="https://img10.360buyimg.com/ddimg/jfs/t1/157215/16/10011/12492/6041df5aE4e24fa40/d879cb6cbc2c4938.png">
           </image>
         </view>
         <view class="main-titleItem">
@@ -64,12 +63,11 @@
     </view>
 
     <view class="main-item column justify-center align-center" bindtap="toMyStore"
-      wx:if="{{userInfo.type === 'shopkeeper'}}">
-      <view class="quan-item"></view>
+      wx:if="{{userInfo.type === 'shopkeeper'}}" style="background: url({{butImgDeep}}) no-repeat;background-size: 100% 100%;">
       <view class="main-wrapItem">
         <view class="main-imgItem">
           <image
-            src="https://img11.360buyimg.com/ddimg/jfs/t1/161661/8/1677/6449/5ff7cc11E7be59ba8/91f05d06a36dd98f.png">
+            src="https://img10.360buyimg.com/ddimg/jfs/t1/171486/8/9631/12761/6041df76E4d37e27d/d805e2957e903b55.png">
           </image>
         </view>
         <view class="main-titleItem">
@@ -80,12 +78,12 @@
     </view>
     <!-- 品牌 -->
     <view class="main-item column justify-center align-center" bindtap="toAllstore"
-      wx:if="{{userInfo.type === 'brand'}}">
+      wx:if="{{userInfo.type === 'brand'}}" style="background: url({{butImg}}) no-repeat;background-size: 100% 100%;">
       <view class="quan-item"></view>
       <view class="main-wrapItem">
         <view class="main-imgItem">
           <image
-            src="https://img11.360buyimg.com/ddimg/jfs/t1/161661/8/1677/6449/5ff7cc11E7be59ba8/91f05d06a36dd98f.png">
+            src="https://img10.360buyimg.com/ddimg/jfs/t1/157215/16/10011/12492/6041df5aE4e24fa40/d879cb6cbc2c4938.png">
           </image>
         </view>
         <view class="main-titleItem">
@@ -96,7 +94,7 @@
     </view>
 
     <view class="main-item column justify-center align-center" bindtap="toActivityDetails"
-      wx:if="{{userInfo.type === 'brand'}}">
+      wx:if="{{userInfo.type === 'brand'}}" style="background: url({{butImgDeep}}) no-repeat;background-size: 100% 100%;">
       <view class="quan-item"></view>
       <view class="main-wrapItem">
         <view class="main-imgItem">

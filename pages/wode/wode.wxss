@@ -1,5 +1,5 @@
 page {
-  background-color: #fff;
+  background-color: #F0F0F0;
 }
 
 button {
@@ -21,7 +21,7 @@ button::after {
 .header {
   width: 100%;
   height: 460rpx;
-  background: url("https://img13.360buyimg.com/ddimg/jfs/t1/170531/4/1533/94044/5ff7baebEc4a1959a/1c651c676a87b955.png") no-repeat;
+  background: url("https://img13.360buyimg.com/ddimg/jfs/t1/157878/35/10401/226707/6041dd3dE9a8a3691/5abadd5d459969dc.png") no-repeat;
   background-size: 100% 100%;
   display: flex;
   justify-content: center;
@@ -83,8 +83,7 @@ button::after {
   width: 45%;
   height: 100%;
   border-radius: 34rpx;
-  background-image: linear-gradient(46deg, rgb(246, 43, 62) 0%, rgb(255, 160, 48) 100%);
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4); */
   overflow: hidden;
   position: relative;
 }
@@ -160,11 +159,11 @@ button::after {
 }
 
 .menu-wrap {
-  width: 100%;
-  /* border-radius: 34rpx; */
-  /* background-color: #fff; */
-  /* box-shadow: 0rpx 0rpx 6rpx 0 rgba(0, 0, 0, 0.2); */
-  padding: 0 60rpx;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 40rpx;
+  padding: 0 22rpx;
+  box-shadow: 4rpx 8rpx 12rpx 0 rgba(0, 0, 0, 0.1);
 }
 
 .menu-item {

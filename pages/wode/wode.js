@@ -50,6 +50,8 @@ Page({
       'https://img10.360buyimg.com/ddimg/jfs/t1/161374/5/8931/141342/603de384E892f4df6/d205737d5f80f35a.jpg',
     ],
     cardCur: 0,
+    butImg: 'https://img11.360buyimg.com/ddimg/jfs/t1/163377/18/9758/32062/6041ddbeE58d07bba/a666dfa16eac9126.png',
+    butImgDeep: 'https://img11.360buyimg.com/ddimg/jfs/t1/165220/29/9284/32477/6041dddbEd2bba1eb/369cf9288e779e9d.png'
   },
   toMyCoupon() {
     if (!wx.getStorageSync('userInfo')) {
@@ -121,14 +123,14 @@ Page({
     //console.log(this.data.cardCur)
   },
 
-  getSwiper(e){
+  getSwiper(e) {
     let id = e.currentTarget.id;
     console.log(id)
     if (id === '0' || id === '2') {
       wx.navigateTo({
         url: '/pages/groupSpecial/groupSpecial',
       })
-    }else{
+    } else {
       wx.switchTab({
         url: '../brandDetails/brandDetails',
       })
@@ -194,14 +196,14 @@ Page({
     let isIphone11 = model.search('iPhone 11') != -1 ? true : false;
     let isIphone12 = model.search('iPhone 12') != -1 ? true : false;
     console.log(model);
-    this.selectComponent("#getJudgment").getJudgment(isIphoneX,isIphone11,isIphone12);
-    if(isIphoneX === true || isIphone11 === true || isIphone12 === true){
+    this.selectComponent("#getJudgment").getJudgment(isIphoneX, isIphone11, isIphone12);
+    if (isIphoneX === true || isIphone11 === true || isIphone12 === true) {
       this.setData({
-        bottom:'220rpx'
+        bottom: '220rpx'
       })
-    }else{
+    } else {
       this.setData({
-        bottom:'140rpx'
+        bottom: '160rpx'
       })
     }
   },
@@ -238,12 +240,14 @@ Page({
           }
         })
         let bln;
-        await util.inspect().then(res=>{
-          bln=res
+        await util.inspect().then(res => {
+          bln = res
         })
-        switch(bln){
+        switch (bln) {
           case true:
-            _t.setData({prize:bln})
+            _t.setData({
+              prize: bln
+            })
             break;
         }
         break;
@@ -256,24 +260,32 @@ Page({
       this.retrieval()
     }
   },
-  async getCoupon(){
-    var that=this;
+  async getCoupon() {
+    var that = this;
     await util.getCoupon(this.data.checkbox)
-    that.setData({modalName:null,prize:false})
+    that.setData({
+      modalName: null,
+      prize: false
+    })
   },
   async retrieval() {
     var that = this;
     let timing = setInterval(async () => {
       if (wx.getStorageSync('userInfo')) {
-        let userInfo=wx.getStorageSync('userInfo')
-        this.setData({userInfo:userInfo})
-        let bln;
-        await util.inspect().then(res=>{
-          bln=res
+        let userInfo = wx.getStorageSync('userInfo')
+        this.setData({
+          userInfo: userInfo
         })
-        switch(bln){
+        let bln;
+        await util.inspect().then(res => {
+          bln = res
+        })
+        switch (bln) {
           case true:
-            this.setData({prize:bln,modalName:'question'})
+            this.setData({
+              prize: bln,
+              modalName: 'question'
+            })
             break;
         }
         setTimeout(() => {

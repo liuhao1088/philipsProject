@@ -3,7 +3,7 @@
   <!-- 头部 -->
   <view class="header">
     <view class="header-imgItem">
-      <image src="https://img12.360buyimg.com/ddimg/jfs/t1/153682/20/13354/12467/5ff678e2E67db20c6/c7385673680b583f.png" mode="widthFix"></image>
+      <image src="https://img13.360buyimg.com/ddimg/jfs/t1/156526/1/12835/34163/6041d124Edfeceb08/23fa0a35a75087f5.png" mode="widthFix"></image>
     </view>
     <view class="header-wrap">
       <view class="search">
@@ -12,17 +12,16 @@
       </view>
 
       <view class="poster-item">
-        <image mode="widthFix" src="https://img11.360buyimg.com/ddimg/jfs/t1/170972/25/1385/108871/5ff6799cEb897f493/dea150afcdb9503b.png"></image>
+        <image mode="widthFix" src="https://img10.360buyimg.com/ddimg/jfs/t1/170740/22/9483/86976/6041d14dE0d5fb3cb/acc29b54ac6a5b42.png"></image>
       </view>
     </view>
   </view>
 
   <view class="title-item">
-    <text class="iconfont icondingwei"></text>
     <view class="title-tagItem">附近门店</view>
   </view>
   <view class="store-mainItem">
-    <view class="store-boxItem"  wx:for="{{list}}" wx:key="id"  data-index="{{index}}"  bindtap="toStoreAppointment" style="background: url({{item.bg}}) no-repeat;background-size: 100% 100%;">
+    <view class="store-boxItem"  wx:for="{{list}}" wx:key="id"  data-index="{{index}}"  bindtap="toStoreAppointment">
       <view class="store-wrapItem">
         <view class="store-mainLeft">
           <view class="store-titleItem">{{item.shop_name}}</view>
@@ -42,7 +41,6 @@
   <view class="tag-item" hidden="{{hiddenFlag}}">
     <view class="tag">暂无更多门店</view>
   </view>
-  <!-- <view style="height:100px;"></view> -->
 </view>
 
 <!-- 导航栏 -->

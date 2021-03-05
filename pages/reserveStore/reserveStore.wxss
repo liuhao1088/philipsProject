@@ -1,5 +1,5 @@
 page {
-  background-color: #fff;
+  background-color: #f0f0f0;
 }
 
 .reserveStoreContainer {
@@ -9,7 +9,7 @@ page {
 }
 
 .header {
-  height: 500rpx;
+  height: 540rpx;
   width: 100%;
   border: 0rpx solid black;
 }
@@ -27,7 +27,7 @@ page {
 }
 
 .header-wrap {
-  height: 322rpx;
+  height: 362rpx;
   width: 100%;
   border: 0rpx solid red;
   position: relative;
@@ -52,7 +52,7 @@ page {
   border: 0rpx solid red;
   line-height: 64rpx;
   text-align: center;
-  background-image: linear-gradient(#fe5327, #fd7e21);
+  background-image: var(--gradualBlueText);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -68,7 +68,7 @@ page {
 .poster-item {
   width: 90%;
   height: 228rpx;
-  margin-top: 30rpx;
+  margin-top: 70rpx;
   border: 0rpx solid black;
 }
 
@@ -84,6 +84,7 @@ page {
   width: 90%;
   border: 0rpx solid red;
   display: flex;
+  margin-top: 70rpx;
 }
 
 .title-item text {
@@ -98,6 +99,7 @@ page {
 .title-tagItem {
   height: 100%;
   font-size: 34rpx;
+  font-weight: bold;
 }
 
 .store-mainItem {
@@ -119,6 +121,7 @@ page {
   padding: 26rpx 32rpx;
   border: 0rpx solid red;
   display: flex;
+  background-color: #fff;
 }
 
 .store-mainLeft {
@@ -126,7 +129,7 @@ page {
   border: 0rpx solid red;
   padding-right: 20rpx;
   width: 70%;
-  color: rgb(255, 255, 255);
+
 }
 
 .store-imgItem {
@@ -152,8 +155,9 @@ page {
   border-bottom-left-radius: 10rpx;
   border-bottom-right-radius: 10rpx;
   font-size: 20rpx;
+  font-weight: bold;
   color: #fff;
-  background-image: linear-gradient(139deg, rgba(254,83,39,0.75), rgba(253,126,33,0.75));
+  background-image: var(--gradualBlueOpacity);
   position: absolute;
   bottom: 0;
 }
@@ -194,8 +198,10 @@ page {
   line-height: 32rpx;
   border-radius: 4rpx;
   font-size: 20rpx;
+  font-weight: bold;
+  color: rgba(0, 56, 169);
   text-align: center;
-  background-image: linear-gradient(139deg, #fe5327, #fd7e21);
+  background-image: var(--gradualBlueTag);
   padding: 0 16rpx;
 }
 

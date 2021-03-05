@@ -1,15 +1,15 @@
 {
   "pages":[
+    "pages/wode/wode",
+    "pages/reserveStore/reserveStore",
     "pages/index/index",
     "pages/home/home",
-    "pages/wode/wode",
     "pages/commonProblem/commonProblem",
     "pages/brandReservationActivity/brandReservationActivity",
     "pages/brandGroupActivity/brandGroupActivity",
     "pages/text/text",
     "pages/storeAppointment/storeAppointment",
     "pages/helpAndFeedback/helpAndFeedback",
-    "pages/reserveStore/reserveStore",
     "pages/groupSpecial/groupSpecial",
     "pages/messageCenter/messageCenter",
     "pages/addStoreInformation/addStoreInformation",

@@ -140,6 +140,7 @@ page {
 .cancel {
   border: 2rpx solid var(--darkBlue);
   color: var(--darkBlue);
+  background-color: #fff;
 }
 
 .accept {

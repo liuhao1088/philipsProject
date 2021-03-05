@@ -45,10 +45,11 @@ Page({
     prize: false,
     posterImg: [
       'https://img10.360buyimg.com/ddimg/jfs/t1/152563/16/14632/154080/5ffe5234Ef203ada0/78ad42bb28dba617.jpg',
-      'https://img10.360buyimg.com/ddimg/jfs/t1/161374/5/8931/141342/603de384E892f4df6/d205737d5f80f35a.jpg',
+      'https://img10.360buyimg.com/ddimg/jfs/t1/170740/22/9483/86976/6041d14dE0d5fb3cb/acc29b54ac6a5b42.png',
       'https://img10.360buyimg.com/ddimg/jfs/t1/152563/16/14632/154080/5ffe5234Ef203ada0/78ad42bb28dba617.jpg',
-      'https://img10.360buyimg.com/ddimg/jfs/t1/161374/5/8931/141342/603de384E892f4df6/d205737d5f80f35a.jpg',
+      'https://img10.360buyimg.com/ddimg/jfs/t1/170740/22/9483/86976/6041d14dE0d5fb3cb/acc29b54ac6a5b42.png',
     ],
+   
     cardCur: 0,
     butImg: 'https://img11.360buyimg.com/ddimg/jfs/t1/163377/18/9758/32062/6041ddbeE58d07bba/a666dfa16eac9126.png',
     butImgDeep: 'https://img11.360buyimg.com/ddimg/jfs/t1/165220/29/9284/32477/6041dddbEd2bba1eb/369cf9288e779e9d.png'

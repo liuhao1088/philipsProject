@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/groupSpecial/groupSpecial",
     "pages/wode/wode",
     "pages/reserveStore/reserveStore",
     "pages/index/index",
@@ -10,7 +11,7 @@
     "pages/text/text",
     "pages/storeAppointment/storeAppointment",
     "pages/helpAndFeedback/helpAndFeedback",
-    "pages/groupSpecial/groupSpecial",
+    
     "pages/messageCenter/messageCenter",
     "pages/addStoreInformation/addStoreInformation",
     "pages/activitySelect/activitySelect",

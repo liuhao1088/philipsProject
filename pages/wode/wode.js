@@ -44,9 +44,9 @@ Page({
     newMsg: 0,
     prize: false,
     posterImg: [
-      'https://img10.360buyimg.com/ddimg/jfs/t1/152563/16/14632/154080/5ffe5234Ef203ada0/78ad42bb28dba617.jpg',
+      'https://img10.360buyimg.com/ddimg/jfs/t1/164567/24/10512/77311/60433c00E38a1ac29/7cdc9fa69e6cf283.jpg',
       'https://img10.360buyimg.com/ddimg/jfs/t1/170740/22/9483/86976/6041d14dE0d5fb3cb/acc29b54ac6a5b42.png',
-      'https://img10.360buyimg.com/ddimg/jfs/t1/152563/16/14632/154080/5ffe5234Ef203ada0/78ad42bb28dba617.jpg',
+      'https://img10.360buyimg.com/ddimg/jfs/t1/164567/24/10512/77311/60433c00E38a1ac29/7cdc9fa69e6cf283.jpg',
       'https://img10.360buyimg.com/ddimg/jfs/t1/170740/22/9483/86976/6041d14dE0d5fb3cb/acc29b54ac6a5b42.png',
     ],
    

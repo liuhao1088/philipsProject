@@ -8,12 +8,12 @@ image {
   vertical-align: middle;
 }
 
-button::after{
+button::after {
   border: 0;
 }
 
 .wrap {
-  height: 826rpx;
+  height: 600rpx;
   width: 100%;
   border: 0rpx solid red;
 }
@@ -26,11 +26,11 @@ button::after{
   height: 152rpx;
   width: 100%;
   border-radius: 56rpx 56rpx 0px 0px;
-  background-image: linear-gradient(90deg,#fd212e, #ffa70c);
+  background-image: linear-gradient(90deg, #fd212e, #ffa70c);
   padding: 24rpx 44rpx;
   display: flex;
   position: relative;
-  top: -190rpx;
+  top: -44rpx;
 }
 
 .group-titleItem {
@@ -76,14 +76,14 @@ button::after{
   background-color: #fff;
   padding-top: 90rpx;
   position: relative;
-  top: -240rpx;
+  top: -100rpx;
 }
 
 .group-main {
   width: 100%;
   color: rgb(194, 194, 194);
   position: relative;
-  top: -60rpx;
+  top: 70rpx;
   padding-bottom: 40rpx;
   display: flex;
   justify-content: center;
@@ -121,8 +121,9 @@ button::after{
 
 .coupon-title {
   height: 100%;
-  font-size: 36rpx;
+  font-size: 28rpx;
   color: rgb(16, 16, 16);
+  font-weight: bold;
 }
 
 .coupon-address {

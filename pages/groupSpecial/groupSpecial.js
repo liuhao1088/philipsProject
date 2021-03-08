@@ -744,7 +744,7 @@ Page({
     } else {
       return {
         title: "大品牌，好未来！", //标题
-        imageUrl: 'https://img10.360buyimg.com/ddimg/jfs/t1/148055/20/20623/109199/5fe94a22E2aeac6fb/f5ba90fc9d52fc06.png', //图片路径
+        imageUrl: 'https://img10.360buyimg.com/ddimg/jfs/t1/162523/18/10723/289272/6045c028E24309cbc/538b2fe4f96b0386.jpg', //图片路径
         path: '/page/groupSpecial/groupSpecial?act_id=' + that.data.data._id + '&cou_code=' + '' + '&end_timestamp=' + that.data.data.end_timestamp
       }
     }

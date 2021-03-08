@@ -24,12 +24,12 @@ Page({
     multiIndex: [0, 0],
   },
   changeStartTime(e) {
-    let time = util.formatTime(new Date());//当前时间
+    let time = util.formatTime(new Date()); //当前时间
     this.setData({
       startTime: e.detail.value
     })
-    let startTime = this.data.startTime;//到店时间
-    flag =  this.compareDate(time,startTime);
+    let startTime = this.data.startTime; //到店时间
+    flag = this.compareDate(time, startTime);
   },
   showModal(e) {
     this.setData({
@@ -70,9 +70,9 @@ Page({
 
   //日期大小比较
   compareDate(date1, date2) {
-    var oDate1 = new Date(date1);//当前时间
-    var oDate2 = new Date(date2);//到店时间
-    console.log("当前时间："+oDate1.getTime(),"到店时间："+oDate2 )
+    var oDate1 = new Date(date1); //当前时间
+    var oDate2 = new Date(date2); //到店时间
+    console.log("当前时间：" + oDate1.getTime(), "到店时间：" + oDate2)
     if (oDate1.getTime() >= oDate2.getTime()) {
       return true; //第一个大
     } else {
@@ -100,11 +100,11 @@ Page({
       let data = JSON.parse(options.data)
       let list = data.re;
       let stamp = Date.parse(util.formatTime(new Date()).replace(/-/g, '/')) / 1000;
-      if(!data.gift&&data.re_using){
-        data.gift=true;
-        let brand_re=wx.getStorageSync('brand_re')
-        data.act[0].content=brand_re[0].content;
-        data.act[0].end_date=brand_re[0].end_date;
+      if (!data.gift && data.re_using) {
+        data.gift = true;
+        let brand_re = wx.getStorageSync('brand_re')
+        data.act[0].content = brand_re[0].content;
+        data.act[0].end_date = brand_re[0].end_date;
       }
       if (list.length >= 1) {
         console.log(list[0].status, stamp, list[0].timestamp)
@@ -212,14 +212,14 @@ Page({
   },
   async submit() {
     var that = this;
-    let userInfo =  wx.getStorageSync('userInfo');
-    if(userInfo.type === "shopkeeper"){
+    let userInfo = wx.getStorageSync('userInfo');
+    if (userInfo.type === "shopkeeper") {
       wx.showToast({
         title: '您是门店商家，不可预约',
         icon: 'none'
       })
       return;
-     }
+    }
 
     if (that.data.nameList[0] == "请选择想要体验的商品，可多选") {
       wx.showToast({
@@ -228,7 +228,7 @@ Page({
       })
       return;
     }
-    
+
     if (that.data.startTime === '请选择到店时间') {
       wx.showToast({
         title: '请选择到店时间',
@@ -237,14 +237,14 @@ Page({
       return;
     }
 
-    if(flag === true){
+    if (flag === true) {
       wx.showToast({
         title: '时间已过，请重新选择',
         icon: 'none'
       })
       return;
     }
-    
+
     wx.requestSubscribeMessage({
       tmplIds: ['RvEz0NmPhCyvj4Tf4E7Zn45l1voHDJl4aCI1dsSalk8', 'hc9gsMXBhMFYn4zmoOvJkMYijrCaFIoIutJNFZrWaHU'],
       success(res) {
@@ -259,7 +259,7 @@ Page({
         }
       }
     })
-    
+
   },
 
   add(userInfo) {
@@ -294,7 +294,7 @@ Page({
           act_code: act_code,
           shopping: that.data.nameList,
           time: that.data.startTime,
-          time_date:time,
+          time_date: time,
           timestamp: Date.parse(time.replace(/-/g, '/')) / 1000,
           user: userInfo.nickName,
           status: 'waiting',

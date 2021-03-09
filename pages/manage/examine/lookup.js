@@ -233,10 +233,9 @@ Page({
             wx.showLoading({
               title: '认证中',
             })
-            wx.cloud.database().collection('shop').where({prove:'success'}).count({
-              success:function(res){
+            wx.cloud.database().collection('shop').where({prove:'success'}).orderBy('shop_code','desc').skip(0).limit(4).get().then(res=>{ 
                 console.log(res)
-                let num=res.total+1;
+                let num=res.data[0].shop_code+1; 
                 wx.cloud.callFunction({
                   name:'recordUpdate',
                   data:{
@@ -274,6 +273,7 @@ Page({
                         creation_timestamp:Date.parse(nowDate.replace(/-/g, '/')) / 1000,
                         _openid:editData._openid,
                         shop_code:num,
+                        shop_id:editData._id,
                         title:"认证门店成功",
                         content:'您的认证门店 '+editData.shop_name+' 已审核通过，门店信息已更新，更多赋能等待您的体验~。',
                         type:'check',
@@ -299,7 +299,7 @@ Page({
                   })
                   wx.setStorageSync('refreshData', editData)
                 })
-              }
+              
             })
             /**/
           }

@@ -10,6 +10,7 @@ Page({
    */
   data: {
     checkbox: [],
+    norm:'',
     nameList: ['请选择想要体验的商品，可多选'],
     data: '',
     firstLoading: true,
@@ -58,7 +59,28 @@ Page({
     }
     console.log(nameList)
   },
-  ChooseCheckbox(e) {
+
+  productChooseCheckbox(e) {
+    let items = this.data.checkbox;
+    let ind = e.currentTarget.dataset.index;
+    for (let i in items) items[i].checked = false
+    if (items[ind].not_joining) {
+      wx.showToast({
+        title: '该商品暂不参与活动',
+        icon: 'none',
+        duration: 1000
+      })
+    } else {
+      items[ind].checked = true;
+    }
+    this.setData({
+      checkbox: items,
+      ind: ind
+    })
+  },
+
+
+  normChooseCheckbox(e) {
     let items = this.data.checkbox;
     let ind = e.currentTarget.dataset.index;
     items[ind].checked = !items[ind].checked;

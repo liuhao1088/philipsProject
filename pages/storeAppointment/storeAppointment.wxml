@@ -71,7 +71,7 @@
 
 <!-- 选择商品 -->
 <view class="cu-modal bottom-modal {{modalName=='ChooseModal'?'show':''}}" bindtap="hideModal" catchtouchmove="ture">
-  <view class="cu-dialog" catchtap style="height: 580rpx;background-color: #fff;">
+  <view class="cu-dialog" catchtap style="padding-bottom: 60rpx;background-color: #fff;">
     <view class="cu-bar bg-white" style="justify-content: flex-end;height: 80rpx;">
       <view class="action text-red" bindtap="hideModal" style="margin-right: 30rpx;color: var(--darkBlue);">确定</view>
     </view>
@@ -84,9 +84,21 @@
  {{checkbox[ind].introduce}}</view>
       </view>
     </view>
+
+    <view class="grid padding-sm" style="padding: 0 30rpx;">产品</view>
     <view class="grid col-3 padding-sm">
       <view wx:for="{{checkbox}}" class="padding-xs" wx:key="id">
-        <button class="cu-btn orange lg block {{item.checked?'line-red':''}}" bindtap="ChooseCheckbox"
+        <button class="cu-btn orange lg block {{item.checked?'line-red':''}}" bindtap="productChooseCheckbox"
+          data-value="{{item.value}}" data-index="{{index}}" data-name="{{item.name}}" style="    padding: 0;">
+          {{item.name}}
+        </button>
+      </view>
+    </view>
+
+    <view class="grid padding-sm" style="padding: 0 30rpx;">规格</view>
+    <view class="grid col-3 padding-sm">
+      <view wx:for="{{checkbox}}" class="padding-xs" wx:key="id">
+        <button class="cu-btn orange lg block {{item.checked?'line-red':''}}" bindtap="normChooseCheckbox"
           data-value="{{item.value}}" data-index="{{index}}" data-name="{{item.name}}" style="    padding: 0;">
           {{item.name}}
         </button>

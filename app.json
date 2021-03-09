@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/reserveStore/reserveStore",
     "pages/wode/wode",
     "pages/groupSpecial/groupSpecial",
-    "pages/reserveStore/reserveStore",
     "pages/index/index",
     "pages/home/home",
     "pages/commonProblem/commonProblem",

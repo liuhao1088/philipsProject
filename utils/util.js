@@ -138,8 +138,8 @@ function nearby() {
           and: [{}],
           lookup: {
             from: 'activity',
-            localField: 'shop_code',
-            foreignField: 'shop_code',
+            localField: '_id',
+            foreignField: 'shop_id',
             as: 'act',
           },
           lookup2: {
@@ -179,8 +179,8 @@ function nearby() {
           and: [{}],
           lookup: {
             from: 'shop',
-            localField: 'shop_code',
-            foreignField: 'shop_code',
+            localField: 'shop_id',
+            foreignField: '_id',
             as: 'shop',
           },
           lookup2: {
@@ -196,7 +196,7 @@ function nearby() {
           limit: 100
         }
       }).then(res => {
-        //console.log(res)
+        console.log(res)
         let data = res.result.list;
         if(data.length==0){
           wx.cloud.callFunction({

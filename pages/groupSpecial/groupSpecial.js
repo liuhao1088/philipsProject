@@ -263,8 +263,8 @@ Page({
           and: [{}],
           lookup: {
             from: 'shop',
-            localField: 'shop_code',
-            foreignField: 'shop_code',
+            localField: 'shop_id',
+            foreignField: '_id',
             as: 'shop',
           },
           lookup2: {
@@ -285,6 +285,7 @@ Page({
       })
     } else {
       let data = wx.getStorageSync('nearby');
+      console.log(data)
       let shop=wx.getStorageSync('nearby_shop')
       that.arrange(data);
       if(data == undefined || data == ''){
@@ -375,6 +376,7 @@ Page({
   //整理数据
   arrange: function (data) {
     var that = this;
+    console.log(data)
     let nowstamp = Date.parse(util.formatTimes(new Date()).replace(/-/g, '/')) / 1000
     if (wx.getStorageSync('userInfo')) {
       that.mine(data)

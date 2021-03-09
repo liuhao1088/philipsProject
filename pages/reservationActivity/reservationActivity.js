@@ -48,7 +48,7 @@ Page({
     var that = this;
     let userInfo=wx.getStorageSync('userInfo')
     scode=userInfo.shop[userInfo.shop.length - 1].shop_code;
-    id=userInfo.shop[userInfo.shop.length - 1].shop_id;
+    id=userInfo.shop[userInfo.shop.length - 1]._id;
     if(options.parse){
       scode='all'
       id='all'
@@ -181,6 +181,7 @@ Page({
     for (let e = 0; e < 10; e++) {
       numberCode += Math.floor(Math.random() * 10)
     }
+    console.log(id)
     wx.cloud.callFunction({
       name: 'recordAdd',
       data: {

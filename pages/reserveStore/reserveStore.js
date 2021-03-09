@@ -135,9 +135,9 @@ Page({
         },
         from: 'activity',
         let: {
-          shop_code: '$shop_code',
+          shop_code: '$_id',
         },
-        match: ['$shop_code', '$$shop_code'],
+        match: ['$shop_id', '$$shop_code'],
         matchs: ['$type', 'reservation'],
         project: {
           shop_code: 0
@@ -145,9 +145,9 @@ Page({
         as: 'act',
         from2: 'reservation',
         let2: {
-          shop_code: '$shop_code',
+          shop_code: '$_id',
         },
-        match2: ['$shop_code', '$$shop_code'],
+        match2: ['$shop_id', '$$shop_code'],
         matchs2: ['$_openid', app.globalData.openid],
         project2: {
           shop_code: 0
@@ -160,6 +160,7 @@ Page({
         limit: 100
       }
     }).then(res => {
+      console.log(res)
       let data = that.data.list.concat(res.result.list);
       if (res.result.list.length == 0) {
         that.loadProgress(100)

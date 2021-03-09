@@ -2,7 +2,6 @@
   "pages":[
     "pages/wode/wode",
     "pages/groupSpecial/groupSpecial",
-   
     "pages/reserveStore/reserveStore",
     "pages/index/index",
     "pages/home/home",
@@ -12,7 +11,6 @@
     "pages/text/text",
     "pages/storeAppointment/storeAppointment",
     "pages/helpAndFeedback/helpAndFeedback",
-    
     "pages/messageCenter/messageCenter",
     "pages/addStoreInformation/addStoreInformation",
     "pages/activitySelect/activitySelect",

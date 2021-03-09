@@ -121,10 +121,33 @@ button::after {
 
 .coupon-title {
   height: 100%;
+  width: 66%;
   font-size: 28rpx;
   color: rgb(16, 16, 16);
   font-weight: bold;
+  border: 0rpx solid red;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+ 
 }
+
+.coupon-tiem{
+  display: inline-block;
+  animation: kf-marque-animation 6.3s linear infinite;
+}
+
+
+@keyframes kf-marque-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 .coupon-address {
   height: 75%;
@@ -222,7 +245,7 @@ button::after {
 
 .coupon-price .group-price {
   color: rgb(255, 31, 19);
-  font-size: 36rpx;
+  font-size: 30rpx;
   font-weight: bold;
 }
 

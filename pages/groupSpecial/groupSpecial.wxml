@@ -29,7 +29,11 @@
       </view>
       <view class="coupon-mainItem">
         <view class="coupon-titleItem">
-          <view class="coupon-title">{{shopping.name}}</view>
+          <view class="coupon-title">
+           
+          <view class="coupon-tiem"> {{shopping.name}}</view>
+         
+          </view>
           <view class="coupon-address">{{data.shop[0].shop_name+'专用'||'全店通用'}}</view>
         </view>
 
